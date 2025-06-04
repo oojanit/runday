@@ -2,328 +2,167 @@
 
 /* FONTS */
 /*
-*** Noto Sans KR 100~900
+*** NOTO SANS KR 100~900 ***
 font-family: "Noto Sans KR", sans-serif;
-*** Inter 100~900
-font-family: "Inter", sans-serif;
+
+*** RALEWAY ***
+font-family: 'Raleway';
+font-weight: 900;
+font-style: italic;
+
+*** PRODUCT SANS ***
+font-family: 'Product Sans';
+font-weight: bold;
+font-style: normal;
+
+font-family: 'Product Sans';
+font-weight: normal;
+font-style: normal;
+*/
+
+/* COLORS */
+/*
+rgb(90, 74, 248)
+rgb(116, 96, 217)
 */
 
 /* HEADER */
 header {
     width: 100%;
-    padding: 30px 0;
-    box-sizing: border-box;
+    height: 80px;
+    background-color: rgb(255,255,255);
+    position: fixed;
+    z-index: 9999;
 }
 header .logo {
     float: left;
+    height: 60px;
+    margin: 10px 0;
 }
-header .logo img {
-    height: 90px;
+header .logo a {
+    width: 100%;
+    height: 100%;
     display: block;
 }
-header .gnb {
+header .logo a img {
+    height: 100%;
+}
+
+header .menu {
     float: right;
+    padding: 11px 0;
 }
-header .gnb ul {
-    margin-top: 20px;
+header .menu .gnb {
+    font-family: 'Product Sans';
+    font-weight: normal;
+    font-style: normal;
 }
-header .gnb ul li {
-    margin-left: 50px;
-}
-header .gnb ul li a {
-    display: block;
-    font-family: "Inter", sans-serif;
-    font-size: 20px;
-    color: rgb(51, 51, 51);
-    padding: 10px 25px;
-    border-radius: 50px;
-    transition: all 0.4s;
-}
-header .gnb ul li a span {
+.gnb > li {
     font-size: 18px;
-    line-height: 10%;
+    padding: 18px 30px;
 }
-header .gnb ul li:last-child a {
-    background-color: rgb(90, 74, 248);
-    color: rgb(255, 255, 255);
+.gnb > li:last-child {
+    background-color: rgb(90,74,248);
+    border-radius: 50px;
 }
-header .gnb ul li a:hover {
-    font-weight: 700;
+.gnb > li:last-child a {
+    color: rgb(255,255,255);
 }
-header .gnb ul li:last-child a:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(90, 74, 248);
-    font-weight: 400;
+.gnb > li a {
+    color: rgb(33,33,33);
+}
+.gnb > li span {
+    font-size: 15px;
+    font-weight: bold;
+}
+.gnb .submenu {
+    position: relative;
+    top: 0;
+    right: 0;
+}
+.gnb .submenu a {
+    display: block;
+    height: 100%;
+}
+.gnb .submenu ul {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 5%;
+}
+.gnb .submenu ul li {
+    text-align: center;
+    float: none;
+    line-height: 50px;
+    background-color: rgb(255,255,255);
+    padding: 0 20px;
 }
 
 /* MAIN */
 main {
-    background: url(../img/img_00.png) no-repeat;
     width: 100%;
-    height: 856px;
-    max-width: 1920px;
-    margin: 0 auto;
+    /* max-width: 1920px; */
+    height: 100%;
+    position: relative; /* .catch, .downbtn 기준 */
+    overflow: hidden;
 }
-main .catchphrase {
-    padding-top: 120px;
-    margin-bottom: 150px;
+.main_box {
+    width: 200%;
+    height: 100%;
 }
-main .catchphrase h2 {
-    font-size: 60px;
-    font-weight: 700;
-    color: rgb(255, 255, 255);
-    margin-bottom: 30px;
-}
-main .catchphrase p {
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    line-height: 2rem;
-}
-main .download {
+.main_box .main_img {
     width: 50%;
-    margin: 0 auto;
-}
-main .download a {
-    display: block;
+    height: 100%;
     float: left;
-    width: 45%;
 }
-main .download a:first-child {
-    margin-right: 10%;
-}
-main .download a img {
-    display: block;
+.main_box .main_img img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-
-/* SECTION - PROMO */
-section.promo {
-    width: 100%;
+main .catch {
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    left: 10%;
+    color: rgb(255,255,255);
+    font-family: 'Product Sans';
 }
-/* SECTION - PROMO - CARD */
-section.promo .promo_card h3 {
-    text-align: center;
-    padding: 200px 0;
-    font-size: 36px;
-    font-weight: 700;
-    color: rgb(51, 51, 51);
-    line-height: 53px;
-}
-section.promo .promo_card {
-    width: 70%;
-    margin: 0 auto 200px;
-}
-.promo_card div .card {
-    width: 60%;
-}
-.promo_card div .card img {
-    width: 100%;
-    display: block;
-}
-.promo_card .desc {
-    width: 40%;
-    margin-top: 200px;
-    box-sizing: border-box;
-    color: rgb(51, 51, 51);
-}
-.promo_card .desc h4 {
-    font-size: 36px;
-    font-weight: 700;
+main .catch h2 {
+    font-size: 64px;
+    font-weight: bold;
     margin-bottom: 20px;
 }
-.promo_card .desc p {
-    font-size: 24px;
-    line-height: 2.4rem;
+main .catch p {
+    font-size: 18px;
+    line-height: 160%;
 }
-.promo_card .leftimg {
-    width: 100%;
+main .downbtn {
+    position: absolute;
+    bottom: 10%;
+    left: 50%; transform: translateX(-50%);
 }
-.promo_card .leftimg .card {
-    float: left;
-    display: block;
+main .downbtn a {
+    display: inline-block;
 }
-.promo_card .leftimg .desc {
-    float: right;
-    padding: 80px 0 0 50px;
+main .downbtn a:last-child {
+    margin-left: 40px;
 }
-.promo_card .rightimg {
-    width: 100%;
+main .downbtn a img {
+    border-radius: 50px;
 }
-.promo_card .rightimg .card {
-    float: right;
-    display: block;
-}
-.promo_card .rightimg .desc {
-    float: left;
-    text-align: right;
-    padding: 80px 50px 0 0;
 
-}
-/* SECTION - PROMO - SCORE */
-section.promo .promo_score {
-    background-image: url(../img/score_back.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-attachment: fixed;
-    background-position: center;
-    box-sizing: border-box;
-    padding: 400px;
-    margin-bottom: 400px;
-}
-.promo_score .pop {
-    background-color: rgba(116, 96, 217, 1);
-    width: 20%;
-    float: left;
-    margin-right: 6.6%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding: 100px 40px;
-    border-radius: 999px;
-    box-sizing: border-box;
-    text-align: center;
-    color: rgb(255, 255, 255);
-}
-.promo_score .pop:last-child {
-    margin-right: 0;
-}
-.promo_score .pop h5 {
-    font-size: 40px;
-    font-weight: 700;
-}
-.promo_score .pop p {
-    font-size: 24px;
-}
+/* SECTION - CONTENTS */
+section.contents {}
+section.contents .promo {}
+section.contents .promo h3 {}
+section.contents .promo .card {}
+section.contents .promo .card .cardimg {}
+section.contents .promo .card .desc {}
+
+section.contents .score {}
 
 /* MARQUEE */
-.mrq {
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-.mrq .txt {
-    font-family: "Inter", sans-serif;
-    font-weight: 900;
-    display: inline-block;
-    font-size: 100px;
-    letter-spacing: 0.5rem;
-    white-space: nowrap;
-
-}
-.mrq .marquee1 {
-    margin-left: -150px;
-    margin-bottom: 20px;
-}
-.mrq .txt strong {
-    color:rgb(116, 96, 217);
-    margin-right: -20px;
-}
-.mrq .txt span {
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 4px rgb(116, 96, 217);
-}
-
 /* SECTION - MEDIA */
-section.media {
-    overflow: hidden;
-}
-/* SECTION - MEDIA - SLIDE */
-section.media .media_slide {
-    background-color: rgb(90, 74, 248);
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 100px;
-}
-.media_slide .box {
-    margin: 100px 0;
-    position: relative;
-}
-.media_slide .box .desc {
-    color: rgb(255, 255, 255);
-    float: left;
-    position: absolute;
-    top: 5%; left: 5%;
-}
-.media_slide .box .desc h2 {
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 60px;
-    margin-bottom: 50px;
-}
-.media_slide .box .desc p {
-    font-size: 32px;
-    margin-bottom: 50px;
-}
-.media_slide .box .desc a {
-    font-size: 18px;
-    color: rgb(90, 74, 248);
-    background-color: rgb(255, 255, 255);
-    display: block;
-    padding: 9px 18px;
-    border-radius: 50px;
-    text-align: center;
-    transition: all 0.4s;
-    border: 1px solid rgb(90, 74, 248);
-}
-.media_slide .box .desc a:hover {
-    color: rgb(255, 255, 255);
-    background-color: rgb(90, 74, 248);
-    border: 1px solid rgb(255, 255, 255);
-}
-.media_slide .box .imgwrap {
-    margin-left: 25%;
-    white-space: nowrap;
-    overflow-x: scroll;
-}
-.media_slide .box .imgwrap::-webkit-scrollbar {
-    background-color: rgba(255,255,255,0.2);
-    border-radius: 20px;
-}
-.media_slide .box .imgwrap::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255,0.8);
-    border-radius: 20px;
-}
-.media_slide .box .imgwrap img {
-    width: 400px;
-    display: inline-block;
-    margin-right: 50px;
-}
-/* SECTION - MEDIA - VIDEO */
-section.media .media_video {
-    text-align: center;
-    margin-bottom: 100px;
-}
-section.media .media_video iframe {
-    width: 1344px;
-    height: 756px;
-    border: 0;
-    border-radius: 20px;
-}
-/* SECTION - MEDIA - DOWNLOAD */
-section.media .media_download {
-    width: 100%;
-    padding: 200px 0;
-    background-image: url(../img/img_06.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-}
-.media_download .download a {
-    margin: 0 auto 80px;
-    display: inline-block;
-}
-.media_download .download a:first-child {
-    margin-right: 40px;
-}
-.media_download .download a img {
-    display: block;
-    width: 300px;
-}
-.media_download .download > img {
-    margin: 0 auto;
-    display: block;
-}
-
 /* FOOTER */
 footer {
     width: 100%;
