@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(raleway_webfont/Raleway-BlackItalic.woff2) format('woff2'),
+    url(raleway_webfont/Raleway-BlackItalic.woff) format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Product Sans';
+    src: url(productsans_webfont/ProductSans-Bold.woff2) format('woff2'),
+    url(productsans_webfont/ProductSans-Bold.woff) format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Product Sans';
+    src: url(productsans_webfont/ProductSans-Regular.woff2) format('woff2'),
+    url(productsans_webfont/ProductSans-Regular.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
