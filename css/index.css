@@ -105,6 +105,7 @@ main {
     height: 100%;
     position: relative; /* .catch, .downbtn 기준 */
     overflow: hidden;
+    margin-bottom: 200px;
 }
 .main_box {
     width: 200%;
@@ -152,14 +153,44 @@ main .downbtn a img {
 }
 
 /* SECTION - CONTENTS */
-section.contents {}
-section.contents .promo {}
-section.contents .promo h3 {}
-section.contents .promo .card {}
-section.contents .promo .card .cardimg {}
-section.contents .promo .card .desc {}
-
-section.contents .score {}
+.contents {
+    width: 100%;
+}
+.contents .promo {
+    background-color: aqua;
+}
+.contents .promo h3 {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 60px;
+    margin-bottom: 200px;
+}
+.contents .promo .card {
+    width: 100%;
+    outline: 2px solid red;
+}
+.left .cardimg {
+    float:left;
+    width: 50%;
+}
+.left .desc {
+    float: right;
+    width: 50%;
+}
+.right .cardimg {
+    float: right;
+    width: 50%;
+}
+.right .desc {
+    float: left;
+    width: 50%;
+}
+.contents .promo .card .cardimg img {
+    width: 100%;
+}
+.contents .promo .card .desc {}
+.contents .score {}
 
 /* MARQUEE */
 /* SECTION - MEDIA */
