@@ -149,6 +149,7 @@ main .downbtn a:last-child {
     margin-left: 40px;
 }
 main .downbtn a img {
+    width: 100%;
     border-radius: 50px;
 }
 
@@ -157,55 +158,253 @@ main .downbtn a img {
     width: 100%;
 }
 .contents .promo {
-    background-color: aqua;
+    margin-bottom: 150px;
 }
 .contents .promo h3 {
     font-size: 36px;
     font-weight: 700;
     text-align: center;
     line-height: 60px;
-    margin-bottom: 200px;
+    margin-bottom: 250px;
 }
 .contents .promo .card {
     width: 100%;
-    outline: 2px solid red;
 }
-.left .cardimg {
-    float:left;
-    width: 50%;
-}
-.left .desc {
-    float: right;
-    width: 50%;
-}
-.right .cardimg {
-    float: right;
-    width: 50%;
-}
-.right .desc {
-    float: left;
+.contents .promo .card .cardimg {
     width: 50%;
 }
 .contents .promo .card .cardimg img {
     width: 100%;
 }
-.contents .promo .card .desc {}
-.contents .score {}
+.contents .promo .card .desc {
+    width: 45%;
+    margin-top: 10%;
+}
+.contents .promo .card .desc h4 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 46px;
+    margin-bottom: 20px;
+}
+.contents .promo .card .desc p {
+    font-size: 18px;
+    line-height: 30px;
+}
+.left .cardimg {
+    float: left;
+    margin-right: 5%;
+}
+.left .desc {
+    float: right;
+}
+.right .cardimg {
+    float: right;
+    margin-left: 5%;
+}
+.right .desc {
+    float: left;
+    text-align: right;
+}
+
+.contents .score {
+    width: 100%;
+    height: 100%;
+    background: url(../img/score_01.jpg) no-repeat center/cover fixed;
+    margin-bottom: 200px;
+}
+.contents .score .pop {
+    padding: 250px 0;
+    text-align: center;
+    width: 20%;
+    float: left;
+    background-repeat: no-repeat;
+    background-position-y: 200px;
+}
+.contents .score .pop~.pop {
+    margin-left: calc(20% / 3);
+}
+.contents .score .pop h5 {
+    color: rgb(255,255,255);
+    font-size: 84px;
+    font-weight: 900;
+}
+.contents .score .pop p {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(204, 204, 204);
+}
+.contents .score .pop:nth-child(1) {background-image: url(../img/icons/down.png);}
+.contents .score .pop:nth-child(2) {background-image: url(../img/icons/people.png);}
+.contents .score .pop:nth-child(3) {background-image: url(../img/icons/graph.png);}
+.contents .score .pop:nth-child(4) {background-image: url(../img/icons/like.png);}
 
 /* MARQUEE */
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+.marquee .mrq1 {
+    width: 500%;
+    margin-left: -200px;
+    margin-bottom: -40px;
+}
+.marquee .mrq2 {
+    width: 500%;
+}
+.marquee .txt {
+    display: inline;
+    font-family: 'Raleway';
+    font-weight: 900;
+    font-style: italic;
+    font-size: 128px;
+    letter-spacing: -2px;
+}
+.marquee .txt strong {
+    color: rgb(90,74,248);
+    margin-right: -15px;
+}
+.marquee .txt span {
+    color: rgb(255,255,255);
+    text-shadow: 0 0 5px rgb(90,74,248);
+}
+
 /* SECTION - MEDIA */
+.media {
+    width: 100%;
+}
+.media .media_slide {
+    width: 100%;
+    background-color: rgb(90,74,248);
+    padding: 150px 0 80px;
+    overflow: hidden;
+    margin-bottom: 200px;
+}
+.media .media_slide .slidebox {
+    width: 200%;
+    margin-left: -20%;
+}
+.media .media_slide .slider {
+    float: left;
+}
+.media .media_slide .slider .prev {
+    width: calc(100% / 10 * 2);
+}
+.media .media_slide .slider .next {
+    width: calc(100% / 10 * 6);
+    /* 화면 확대했을 때 desc 아래로 next가 오는 것 수정 */
+}
+.media .media_slide .slider .slideimg {
+    width: 414px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    float: left;
+}
+.media .media_slide .slider .slideimg img {
+    width: 100%;
+}
+.media .media_slide .desc {
+    width: calc(100% / 10 * 1.3);
+    height: 100%;
+    float: left;
+}
+.media .media_slide .desc h2 {
+    font-size: 64px;
+    font-family: 'Raleway';
+    font-weight: 900;
+    font-style: italic;
+    color: rgb(255,255,255);
+    margin-bottom: 5%;
+}
+.media .media_slide .desc p {
+    font-size: 36px;
+    color: rgb(255,255,255);
+    line-height: 120%;
+    margin-bottom: 45%;
+}
+.media .media_slide .desc a {
+    width: 320px;
+    text-align: center;
+    padding: 8px 36px;
+    box-sizing: border-box;
+    color: rgb(90,74,248);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 60px;
+    background-color: rgb(255,255,255);
+    border-radius: 9999px;
+}
+
+.media .media_video {
+    width: 100%;
+}
+.media .media_video iframe {
+    width: 1280px;
+    height: 740px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 20px;
+}
+
+.media .media_video .media_download {
+    width: 100%;
+    background: url(../img/img_06.png) no-repeat;
+    background-size: cover;
+    margin-top: -300px;
+    padding: 500px 0 100px;
+}
+.media .media_video .media_download .appimg {
+    width: 35%;
+    float: left;
+    margin: 0 10% 0 5%;
+}
+.media .media_video .media_download .appimg img {
+    width: 100%;
+}
+.media .media_video .media_download .desc {
+    width: 50%;
+    float: left;
+    color: rgb(255,255,255);
+}
+.media .media_video .media_download .desc h4 {
+    font-size: 36px;
+    font-weight: 900;
+    margin-top: 10%;
+    margin-bottom: 40px;
+}
+.media .media_video .media_download .desc p {
+    font-size: 18px;
+    margin-bottom: 10%;
+}
+.media .media_video .media_download .desc .downbtn {
+    width: 100%;
+}
+.media .media_video .media_download .desc .downbtn a {
+    width: 40%;
+    display: inline-block;
+}
+.media .media_video .media_download .desc .downbtn a:last-child {
+    margin-left: 3%;
+}
+.media .media_video .media_download .desc .downbtn a img {
+    width: 100%;
+    border-radius: 50px;
+}
+
 /* FOOTER */
 footer {
     width: 100%;
     color: rgb(153, 153, 153);
     text-align: center;
     font-size: 18px;
+    border-top: 1px solid rgba(153, 153, 153, 0.2);
+
 }
 footer .ftrwrap {
     width: 1280px;
     padding: 40px;
     margin: 0 auto;
-    border-bottom: 1px solid rgba(153, 153, 153,0.2);
+    border-bottom: 1px solid rgba(153, 153, 153, 0.2);
 }
 footer .ftrwrap .logo {
     float: left;
