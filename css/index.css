@@ -398,7 +398,7 @@ footer {
     text-align: center;
     font-size: 18px;
     border-top: 1px solid rgba(153, 153, 153, 0.2);
-
+    padding: 10px 0 20px;
 }
 footer .ftrwrap {
     width: 1280px;
@@ -424,6 +424,9 @@ footer .ftrwrap .contracts li {
 }
 footer .ftrwrap .contracts li a {
     color: rgb(153, 153, 153);
+    font-weight: 400;
+}
+footer .ftrwrap .contracts li a:hover {
     font-weight: 700;
 }
 footer .ftrwrap p {
