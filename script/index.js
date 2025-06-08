@@ -4,15 +4,11 @@ $(function(){
 
 // gnb submenu dropdown
     $('.submenu').on('mouseenter',function(){
-        $('.gnb .submenu ul').slideDown(100,function(){
-            $(this).on('mouseenter',function(){
-                $(this).css('display','block');
-            });
-        });
+        $('.gnb .submenu ul').slideDown(200);
     });
-    /* $('.submenu').on('mouseleave',function(){
-        $('.gnb .submenu ul').slideUp(100);
-    }); */
+    $('.submenu').on('mouseleave',function(){
+        $('.gnb .submenu ul').slideUp(200);
+    });
 
 // gnb hover effect
     $('.menu .gnb').children('li').on('mouseover',function(){
