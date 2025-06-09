@@ -297,44 +297,46 @@ main .downbtn a img {
 }
 .media .media_slide {
     width: 100%;
+    height: 520px;
     background-color: rgb(90,74,248);
     padding: 150px 0 80px;
     margin-bottom: 200px;
-    position: relative; /* .desc, btn 기준 */
+    position: relative; /* .desc, .slider, btn 기준 */
 }
 .media .media_slide .slidebox {
     width: 90%;
+    height: 100%;
     margin-left: 8.5%;
 }
-.media .media_slide .slider {}
+.media .media_slide .slider {
+    height: 100%;
+    position: absolute;
+}
 .media .media_slide .slider.prev {
     width: calc(100% / 6 * 1);
-    float: left;
+    top: 15%;
+    left: 3%;
 }
 .media .media_slide .slider.next {
     width: calc(100% / 6 * 3);
-    float: right;
+    top: 15%;
+    right: 3%;
 }
 .media .media_slide .slider.hide {
     display: none;
 }
 .media .media_slide .slider .slideimg {
-    padding-left: 3%;
-    box-sizing: border-box;
     float: left;
 }
 .media .media_slide .slider .slideimg img {
-    width: 100%;
+    width: 95%;
     border-radius: 50px;
 }
 .media .media_slide .desc {
-    width: calc(100% / 6 * 1.5);
-    padding-right: 1%;
-    box-sizing: border-box;
     text-align: right;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 17%;
+    left: 22%;
 }
 .media .media_slide .slider.prev .slideimg {
     width: 100%;
@@ -354,7 +356,7 @@ main .downbtn a img {
     font-size: 36px;
     color: rgb(255,255,255);
     line-height: 120%;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 .media .media_slide .desc a {
     display: inline-block;
