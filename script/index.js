@@ -10,22 +10,6 @@ $(function(){
         $('.gnb .submenu ul').slideUp(200);
     });
 
-// gnb hover effect
-    /* $('.menu .gnb').children('li').on('mouseover',function(){
-        $(this).css('font-weight','700');
-        $(this).children('ul, li').css('font-weight','400');
-    });
-    $('.menu .gnb').children('li').on('mouseout',function(){
-        $(this).css('font-weight','400');
-    });
-
-    $('.submenu ul').children('li').on('mouseover',function(){
-        $(this).css('font-weight','700');
-    });
-    $('.submenu ul').children('li').on('mouseout',function(){
-        $(this).css('font-weight','400');
-    }); */
-
 // main img slide + catch text change
     var catch1 = $('.catch').html();
     var catch2 = '<h2>오직 나만을 위한 <br>달리기 전문 트레이너!</h2><p>달리기는 외로운 운동이다?<br>여러분은 혼자가 아닙니다!<br>나만의 100% 풀 보이스 트레이너와 함께 달려보는 건 어떨까요?</p>';
@@ -90,13 +74,13 @@ $(function(){
                 backgroundPositionY: '200px'
             },500);
         }
-        if (scTop >= 2500) {
+        if (scTop >= 2400) {
             $('.pop').eq(2).animate({
                 opacity: 1,
                 backgroundPositionY: '200px'
             },500);
         }
-        if (scTop >= 2700) {
+        if (scTop >= 2600) {
             $('.pop').eq(3).animate({
                 opacity: 1,
                 backgroundPositionY: '200px'
@@ -106,36 +90,46 @@ $(function(){
     });    
 
 // marquee
+    /* $('.mrq1').marquee({
+        speed: 100,
+	    gap: 20, //gap in pixels between the tickers
+	    delayBeforeStart: 0, //time in milliseconds before the marquee will start animating
+	    direction: 'right', //'left' or 'right'
+	    duplicated: true, //true or false - should the marquee be duplicated to show an effect of continues flow
+        startVisible: true
+    });
+    $('.mrq2').marquee({
+        speed: 100,
+	    gap: 20,
+	    delayBeforeStart: 0,
+	    direction: 'left',
+	    duplicated: true,
+        startVisible: true
+    }); */
+    // 스크롤 내렸을 때 새로고침 되듯이 위로 스크롤 돌아가는 현상 수정하기
 
 // media image slide
     $('.slidebtn .btn_prev').click(function(e){
         e.preventDefault();
         
-        $('.slidebox .desc').slideUp(600);
-        $('.slidebox .desc').slideDown(600);
+        /* $('.slidebox .desc').slideUp(300);
+        $('.slidebox .desc').slideDown(300); */
 
-        var slideDis = ($('.slider.next').children('.slideimg').first().position().left)-($('.slider.prev').children('.slideimg').last().position().left);
-
-        $('.slider.next').animate({
-            marginLeft: $('.slider.next .slideimg').width()
-        },600,function(){
-            $('.slider.next').children('.slideimg').last().prependTo($('.slider.hide'));
-            $('.slider.hide').children('.slideimg').last().prependTo($('.slider.prev'));
-            $(this).css('margin-left','0');
-        });
-
-        $('.slider.prev').animate({
-            marginLeft: slideDis+'px'
-        },600,function(){
-            $(this).css('margin-left','0');
-            $('.slider.prev').children('.slideimg').last().prependTo($('.slider.next'));
-        });
-        
+        $('.slider.prev .slideimg').last().prependTo($('.slider.next'));
+        /*
+        $('.slider.next').children('.slideimg').last().prependTo($('.slider.hide'));
+        $('.slider.hide').children('.slideimg').last().prependTo($('.slider.prev'));
+        $('.slider.prev').children('.slideimg').last().prependTo($('.slider.next'));
+        */
 
     });
 
     $('.slidebtn .btn_next').click(function(e){
         e.preventDefault();
+
+        /* $('.slidebox .desc').slideUp(300);
+        $('.slidebox .desc').slideDown(300); */
+
         $('.slider.hide').children('.slideimg').first().appendTo($('.slider.next'));
         $('.slider.prev').children('.slideimg').first().appendTo($('.slider.hide'));
         $('.slider.next').children('.slideimg').first().appendTo($('.slider.prev'));
