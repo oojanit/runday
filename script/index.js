@@ -90,7 +90,7 @@ $(function(){
     });    
 
 // marquee
-    /* $('.mrq1').marquee({
+    $('.mrq1').marquee({
         speed: 100,
 	    gap: 20, //gap in pixels between the tickers
 	    delayBeforeStart: 0, //time in milliseconds before the marquee will start animating
@@ -105,7 +105,7 @@ $(function(){
 	    direction: 'left',
 	    duplicated: true,
         startVisible: true
-    }); */
+    });
     // 스크롤 내렸을 때 새로고침 되듯이 위로 스크롤 돌아가는 현상 수정하기
 
 // media image slide
