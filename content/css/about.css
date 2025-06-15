@@ -27,3 +27,58 @@ font-style: normal;
 rgb(90, 74, 248)
 rgb(116, 96, 217)
 */
+
+/* MAIN */
+main {
+    width: 100%;
+    /* max-width: 1920px; */
+    height: 100%;
+    position: relative; /* .catch, .downbtn 기준 */
+    overflow: hidden;
+    margin-bottom: 200px;
+}
+.main_box {
+    width: 300%;
+    height: 100%;
+}
+.main_box .main_img {
+    width: calc(100% / 3);
+    height: 100%;
+    float: left;
+}
+.main_box .main_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+main .catch {
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    left: 10%;
+    color: rgb(255,255,255);
+    font-family: 'Product Sans';
+}
+main .catch h2 {
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+main .catch p {
+    font-size: 18px;
+    line-height: 160%;
+}
+main .downbtn {
+    position: absolute;
+    bottom: 10%;
+    left: 50%; transform: translateX(-50%);
+}
+main .downbtn a {
+    display: inline-block;
+}
+main .downbtn a:last-child {
+    margin-left: 40px;
+}
+main .downbtn a img {
+    width: 100%;
+    border-radius: 50px;
+}
