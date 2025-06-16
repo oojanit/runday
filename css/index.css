@@ -176,32 +176,23 @@ main .downbtn a img {
     width: 100%;
     overflow: hidden;
 }
-.marquee .mrq1 {
-    display: block;
-    width: 100%;
-    overflow: hidden;
-}
-.marquee .mrq2 {
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    margin-top: -40px;
+.marquee .mrq1, .marquee .mrq2 {
+    width: 300%;
 }
 .marquee .txt {
-    display: inline-block;
     font-family: 'Raleway';
     font-weight: 900;
     font-style: italic;
     font-size: 128px;
-    letter-spacing: -2px;
+    margin-right: 10px;
 }
 .marquee .txt strong {
     color: rgb(90,74,248);
-    margin-right: -15px;
 }
 .marquee .txt span {
     color: rgb(255,255,255);
     text-shadow: 0 0 5px rgb(90,74,248);
+    margin-left: -20px;
 }
 
 /* SECTION - MEDIA */

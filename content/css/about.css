@@ -34,22 +34,17 @@ main {
     /* max-width: 1920px; */
     height: 100%;
     position: relative; /* .catch, .downbtn 기준 */
-    overflow: hidden;
     margin-bottom: 200px;
 }
-.main_box {
-    width: 300%;
+main .main_img {
+    width: 100%;
     height: 100%;
 }
-.main_box .main_img {
-    width: calc(100% / 3);
-    height: 100%;
-    float: left;
-}
-.main_box .main_img img {
+.main_img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    
 }
 main .catch {
     position: absolute;
@@ -81,4 +76,52 @@ main .downbtn a:last-child {
 main .downbtn a img {
     width: 100%;
     border-radius: 50px;
+}
+
+/* CONTENTS */
+.contents {
+    width: 100%;
+}
+.contents .features .card {
+    width: 100%;
+}
+.contents .features .card .cardimg {
+    width: 50%;
+    /* opacity: 0; */
+}
+.contents .features .card .cardimg img {
+    width: 100%;
+    border-radius: 50px;
+}
+.contents .features .card .desc {
+    width: 45%;
+    /*
+    margin-top: 20%; 10%로
+    opacity: 0;
+    */
+}
+.contents .features .card .desc h4 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 46px;
+    margin-bottom: 20px;
+}
+.contents .features .card .desc p {
+    font-size: 18px;
+    line-height: 30px;
+}
+.left .cardimg {
+    float: left;
+    margin-right: 5%;
+}
+.left .desc {
+    float: right;
+}
+.right .cardimg {
+    float: right;
+    margin-left: 5%;
+}
+.right .desc {
+    float: left;
+    text-align: right;
 }
