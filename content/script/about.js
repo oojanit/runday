@@ -11,7 +11,7 @@ $(function () {
         $('.gnb .submenu ul').slideUp(200);
     });
 
-    // card
+    // scroll - card
     $(window).on('scroll', function () {
         scTop = $(this).scrollTop();
         console.log(scTop);
@@ -69,8 +69,14 @@ $(function () {
                 opacity: 1
             }, 300);
         }
-
     });
+
+    // appslide
+    $('.appslide .slider .slide').on('click',function(){
+        
+    });
+
+
 
 
 

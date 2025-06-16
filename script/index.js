@@ -67,30 +67,70 @@ $(function () {
                 opacity: 1,
                 backgroundPositionY: '200px'
             }, 500);
+            var id0 = setInterval(count0Fn, 12.5);
         }
         if (scTop >= 2300) {
             $('.pop').eq(1).animate({
                 opacity: 1,
                 backgroundPositionY: '200px'
             }, 500);
+            var id1 = setInterval(count1Fn, 135);
         }
         if (scTop >= 2400) {
             $('.pop').eq(2).animate({
                 opacity: 1,
                 backgroundPositionY: '200px'
             }, 500);
+            var id2 = setInterval(count2Fn, 333);
         }
         if (scTop >= 2600) {
             $('.pop').eq(3).animate({
                 opacity: 1,
                 backgroundPositionY: '200px'
             }, 500);
+            var id3 = setInterval(count3Fn, 55);
         }
 
     });
 
+    // score pop number count
+    var count0 = count1 = count2 = count3 = 0;
+
+    function count0Fn() {
+        count0++;
+        if (count0 > 400) {
+            clearInterval(id0);
+        } else {
+            $(".pop").eq(0).find('.no').text(count0);
+        }
+    }
+    function count1Fn() {
+        count1++;
+        if (count1 > 37) {
+            clearInterval(id1);
+        } else {
+            $(".pop").eq(1).find('.no').text(count1);
+        }
+    }
+    function count2Fn() {
+        count2++;
+        if (count2 > 15) {
+            clearInterval(id2);
+        } else {
+            $(".pop").eq(2).find('.no').text(count2);
+        }
+    }
+    function count3Fn() {
+        count3++;
+        if (count3 > 90) {
+            clearInterval(id2);
+        } else {
+            $(".pop").eq(3).find('.no').text(count3);
+        }
+    }
+
     // marquee
-    setInterval(flow,10);
+    setInterval(flow, 10);
     var moveNum = 0; // 이동하는 left값을 담을 변수!
 
     // 함수 flow() 기능: 컨텐츠를 왼쪽으로 흐르게 함

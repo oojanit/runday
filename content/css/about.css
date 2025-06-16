@@ -193,8 +193,11 @@ main .downbtn a img {
     right: -50px;
 }
 .contents .appslide .slider .slide {
-    width: 450px;
+    width: 300px;
     margin-left: 20px;
+}
+.contents .appslide .slider .slide:first-child {
+    width: 500px;
 }
 .contents .appslide .slider .slide img {
     width: 100%;

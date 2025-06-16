@@ -157,6 +157,7 @@ main .downbtn a img {
     margin-left: calc(20% / 3);
 }
 .contents .score .pop h5 {
+    display: inline;
     color: rgb(255,255,255);
     font-size: 84px;
     font-weight: 900;
