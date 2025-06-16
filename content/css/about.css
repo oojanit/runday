@@ -81,13 +81,15 @@ main .downbtn a img {
 /* CONTENTS */
 .contents {
     width: 100%;
+    margin-bottom: 200px;
 }
+/* CONTENTS - FEATURES */
 .contents .features .card {
     width: 100%;
 }
 .contents .features .card .cardimg {
     width: 50%;
-    /* opacity: 0; */
+    opacity: 0;
 }
 .contents .features .card .cardimg img {
     width: 100%;
@@ -95,10 +97,19 @@ main .downbtn a img {
 }
 .contents .features .card .desc {
     width: 45%;
-    /*
-    margin-top: 20%; 10%로
-    opacity: 0;
-    */
+    margin-top: 20%;
+    opacity: 0;   
+}
+.contents .features .card .desc h3 {
+    font-family: 'Raleway';
+    font-weight: 900;
+    font-style: italic;
+    font-size: 20px;
+    text-decoration-line: line-through;
+    text-decoration-color: rgba(116,96,217,0.4);
+    text-decoration-style: solid;
+    text-decoration-thickness: 15px;
+    margin-bottom: 20px;
 }
 .contents .features .card .desc h4 {
     font-weight: 700;
@@ -124,4 +135,50 @@ main .downbtn a img {
 .right .desc {
     float: left;
     text-align: right;
+}
+/* CONTENTS - appslide */
+.contents .appslide {
+    width: 100%;
+    height: 1000px;
+    padding: 230px 0 300px 125px;
+    box-sizing: border-box;
+    background-color: rgb(90, 74, 248);
+    position: relative;
+}
+.contents .appslide::before {
+    content: "";
+    display: block;
+    width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: -20%;
+    background-image: url(../../img/logo/runday_logo_white_r.png);
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    background-size: 60%;
+}
+.contents .appslide .des {
+    width: 600px;
+    color: rgb(255,255,255);
+}
+.contents .appslide .des h4 {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+.contents .appslide .des p {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 100px;
+}
+.contents .appslide .des .pager {
+    font-size: 32px;
+}
+.contents .appslide .des .pager li~li {
+    margin-left: 16px;
+}
+.contents .appslide .des .pager li.on {}
+.contents .appslide .slider {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
