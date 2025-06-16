@@ -235,7 +235,7 @@ main .downbtn a img {
 .media .media_slide .desc {
     position: absolute;
     top: 20%;
-    left: 20%;
+    left: 25%;
     text-align: right;
 }
 .media .media_slide .slider.prev .slideimg {
