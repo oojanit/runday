@@ -42,7 +42,7 @@ $(function () {
                 opacity: 1
             }, 300);
         }
-        if (scTop >= 2200) { // 스크롤 값 내용추가 후 수정
+        if (scTop >= 3800) { // 스크롤 값 내용추가 후 수정
             $('.card').eq(3).find('.cardimg').animate({
                 opacity: 1
             }, 600)
@@ -51,7 +51,7 @@ $(function () {
                 opacity: 1
             }, 300);
         }
-        if (scTop >= 2700) {
+        if (scTop >= 4400) {
             $('.card').eq(4).find('.cardimg').animate({
                 opacity: 1
             }, 600)
@@ -60,7 +60,7 @@ $(function () {
                 opacity: 1
             }, 300);
         }
-        if (scTop >= 3200) {
+        if (scTop >= 5000) {
             $('.card').eq(5).find('.cardimg').animate({
                 opacity: 1
             }, 600)

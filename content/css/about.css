@@ -28,6 +28,10 @@ rgb(90, 74, 248)
 rgb(116, 96, 217)
 */
 
+body {
+    overflow-x: hidden;
+}
+
 /* MAIN */
 main {
     width: 100%;
@@ -81,9 +85,11 @@ main .downbtn a img {
 /* CONTENTS */
 .contents {
     width: 100%;
-    margin-bottom: 200px;
 }
 /* CONTENTS - FEATURES */
+.contents .features {
+    margin-bottom: 200px;
+}
 .contents .features .card {
     width: 100%;
 }
@@ -139,25 +145,27 @@ main .downbtn a img {
 /* CONTENTS - appslide */
 .contents .appslide {
     width: 100%;
-    height: 1000px;
     padding: 230px 0 300px 125px;
     box-sizing: border-box;
     background-color: rgb(90, 74, 248);
     position: relative;
+    margin-bottom: 400px;
 }
 .contents .appslide::before {
     content: "";
     display: block;
     width: 100%; height: 100%;
     position: absolute;
-    top: 0; left: -20%;
+    top: 0; left: 0;
     background-image: url(../../img/logo/runday_logo_white_r.png);
     background-repeat: no-repeat;
     opacity: 0.4;
-    background-size: 60%;
+    background-size: 65%;
+    background-position-x: -67%;
+    background-position-y: 23%;
 }
 .contents .appslide .des {
-    width: 600px;
+    width: 620px;
     color: rgb(255,255,255);
 }
 .contents .appslide .des h4 {
@@ -176,9 +184,19 @@ main .downbtn a img {
 .contents .appslide .des .pager li~li {
     margin-left: 16px;
 }
-.contents .appslide .des .pager li.on {}
+.contents .appslide .des .pager li.on {
+    color: rgb(0,0,0);
+}
 .contents .appslide .slider {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 230px;
+    right: -50px;
+}
+.contents .appslide .slider .slide {
+    width: 520px;
+    margin-left: 20px;
+}
+.contents .appslide .slider .slide img {
+    width: 100%;
+    border-radius: 50px;
 }
