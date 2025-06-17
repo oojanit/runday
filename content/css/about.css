@@ -145,7 +145,7 @@ main .downbtn a img {
 /* CONTENTS - appslide */
 .contents .appslide {
     width: 100%;
-    padding: 230px 0 300px 125px;
+    padding: 120px 0 120px;
     box-sizing: border-box;
     background-color: rgb(90, 74, 248);
     position: relative;
@@ -161,45 +161,55 @@ main .downbtn a img {
     background-repeat: no-repeat;
     opacity: 0.4;
     background-size: 65%;
-    background-position-x: -67%;
-    background-position-y: 23%;
+    background-position-x: -65%;
+    background-position-y: 43%;
 }
-.contents .appslide .des {
+.appslide .des {
     width: 620px;
+    margin-left: 120px;
     color: rgb(255,255,255);
 }
-.contents .appslide .des h4 {
+.appslide .des h4 {
     font-size: 64px;
     font-weight: 700;
     margin-bottom: 60px;
 }
-.contents .appslide .des p {
+.appslide .des p {
     font-size: 32px;
     font-weight: 400;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
-.contents .appslide .des .pager {
-    font-size: 32px;
+.appslide .des .pager {
+    font-size: 20px;
 }
-.contents .appslide .des .pager li~li {
+.appslide .des .pager li~li {
     margin-left: 16px;
 }
-.contents .appslide .des .pager li.on {
+.appslide .des .pager li.on {
     color: rgb(0,0,0);
 }
-.contents .appslide .slider {
+.appslide .slider {
+    width: 1060px;
     position: absolute;
-    top: 230px;
+    top: 120px;
     right: -50px;
+    outline: 2px solid red;
+    overflow: hidden;
 }
-.contents .appslide .slider .slide {
+.appslide .slider .slidewrap {
+    width: 1060px;
+}
+.appslide .slider .slide {
     width: 300px;
     margin-left: 20px;
-}
-.contents .appslide .slider .slide:first-child {
-    width: 500px;
-}
-.contents .appslide .slider .slide img {
-    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
     border-radius: 50px;
+    box-shadow: 1px 1px 10px rgba(116,96,217,0.3);
+}
+.appslide .slider .slide:first-child {
+    width: 400px;
+}
+.appslide .slider .slide img {
+    width: 100%;
 }

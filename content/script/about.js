@@ -13,9 +13,9 @@ $(function () {
 
     // scroll - card
     $(window).on('scroll', function () {
-        scTop = $(this).scrollTop();
-        console.log(scTop);
-        if (scTop >= 700) {
+        var scTop = $(this).scrollTop();
+        var winHeight = Math.ceil($(this).height() * 0.8); // window height 20%
+        if (scTop >= ($('.card').eq(0).offset().top - winHeight)) {
             $('.card').eq(0).find('.cardimg').animate({
                 opacity: 1
             }, 600)
@@ -24,7 +24,7 @@ $(function () {
                 opacity: 1
             }, 300);
         }
-        if (scTop >= 1200) {
+        if (scTop >= ($('.card').eq(1).offset().top - winHeight)) {
             $('.card').eq(1).find('.cardimg').animate({
                 opacity: 1
             }, 600)
@@ -33,7 +33,7 @@ $(function () {
                 opacity: 1
             }, 300);
         }
-        if (scTop >= 1700) {
+        if (scTop >= ($('.card').eq(2).offset().top - winHeight)) {
             $('.card').eq(2).find('.cardimg').animate({
                 opacity: 1
             }, 600)
@@ -42,7 +42,7 @@ $(function () {
                 opacity: 1
             }, 300);
         }
-        if (scTop >= 3800) { // 스크롤 값 내용추가 후 수정
+        if (scTop >= ($('.card').eq(3).offset().top - winHeight)) {
             $('.card').eq(3).find('.cardimg').animate({
                 opacity: 1
             }, 600)
@@ -51,7 +51,7 @@ $(function () {
                 opacity: 1
             }, 300);
         }
-        if (scTop >= 4400) {
+        if (scTop >= ($('.card').eq(4).offset().top - winHeight)) {
             $('.card').eq(4).find('.cardimg').animate({
                 opacity: 1
             }, 600)
@@ -60,7 +60,7 @@ $(function () {
                 opacity: 1
             }, 300);
         }
-        if (scTop >= 5000) {
+        if (scTop >= ($('.card').eq(5).offset().top - winHeight)) {
             $('.card').eq(5).find('.cardimg').animate({
                 opacity: 1
             }, 600)
@@ -72,7 +72,17 @@ $(function () {
     });
 
     // appslide
-    $('.appslide .slider .slide').on('click',function(){
+    $('.appslide .slider').on('click',function(){
+        $('.slidewrap').animate({
+            marginLeft: '-420px'
+        },600).find('.slide').eq(1).animate({
+            width: '400px'
+        },600,function(){
+            $('.slide').eq(0).appendTo($('.slidewrap'));
+            $('.slidewrap').css({
+                marginLeft: 0
+            });
+        });
         
     });
 
