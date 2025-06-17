@@ -32,17 +32,17 @@ $(function () {
     }
     setInterval(mainSlide, 3000);
 
-    // promo slide in 900, 1400
-    var scTop = 0;
+    // scroll events
     $(window).on('scroll', function () {
-        scTop = $(this).scrollTop();
-        /* console.log(scTop); */
-        if (scTop >= 400) {
+        var scTop = $(this).scrollTop();
+        var winHeight = Math.ceil($(this).height() * 0.8); // window height 20%
+
+        if (scTop >= ($('.promo h3').offset().top - winHeight)) {
             $('.promo h3').animate({
                 opacity: 1
             }, 600);
         };
-        if (scTop >= 900) {
+        if (scTop >= ($('.left').offset().top - winHeight)) {
             $('.left .cardimg').animate({
                 opacity: 1
             }, 600)
@@ -51,7 +51,7 @@ $(function () {
                 opacity: 1
             }, 300);
         }
-        if (scTop >= 1400) {
+        if (scTop >= ($('.right').offset().top - winHeight)) {
             $('.right .cardimg').animate({
                 opacity: 1
             }, 600)
@@ -61,41 +61,37 @@ $(function () {
             }, 300);
         }
 
-        // score pop up 2100~
-        if (scTop >= 2100) {
+        // score pop up & number count
+        if (scTop >= ($('.pop').offset().top - winHeight)) {
             $('.pop').eq(0).animate({
                 opacity: 1,
                 backgroundPositionY: '200px'
-            }, 500);
-            var id0 = setInterval(count0Fn, 12.5);
+            }, 300, function () {
+                var id0 = setInterval(count0Fn, 6);
+                $('.pop').eq(1).animate({
+                    opacity: 1,
+                    backgroundPositionY: '200px'
+                }, 300, function () {
+                    var id1 = setInterval(count1Fn, 70);
+                    $('.pop').eq(2).animate({
+                        opacity: 1,
+                        backgroundPositionY: '200px'
+                    }, 300, function () {
+                        var id2 = setInterval(count2Fn, 150);
+                        $('.pop').eq(3).animate({
+                            opacity: 1,
+                            backgroundPositionY: '200px'
+                        }, 300, function () {
+                            var id3 = setInterval(count3Fn, 27);
+                        });
+                    });
+                });
+            });
         }
-        if (scTop >= 2300) {
-            $('.pop').eq(1).animate({
-                opacity: 1,
-                backgroundPositionY: '200px'
-            }, 500);
-            var id1 = setInterval(count1Fn, 135);
-        }
-        if (scTop >= 2400) {
-            $('.pop').eq(2).animate({
-                opacity: 1,
-                backgroundPositionY: '200px'
-            }, 500);
-            var id2 = setInterval(count2Fn, 333);
-        }
-        if (scTop >= 2600) {
-            $('.pop').eq(3).animate({
-                opacity: 1,
-                backgroundPositionY: '200px'
-            }, 500);
-            var id3 = setInterval(count3Fn, 55);
-        }
-
     });
 
-    // score pop number count
+    // score pop number count function
     var count0 = count1 = count2 = count3 = 0;
-
     function count0Fn() {
         count0++;
         if (count0 > 400) {
@@ -131,12 +127,9 @@ $(function () {
 
     // marquee
     setInterval(flow, 10);
-    var moveNum = 0; // 이동하는 left값을 담을 변수!
-
-    // 함수 flow() 기능: 컨텐츠를 왼쪽으로 흐르게 함
+    var moveNum = 0;
     function flow() {
-        moveNum++; // left 이동값을 1씩 증가
-
+        moveNum++;
         // (무한반복을 위해) 다음을 위한 준비!
         // li 하나의 너비를 구함: 그 너비보다 이동한 left값(moveNum)이 커졌을 때 
         var boxWidth = $('.mrq1 .txt').first().outerWidth();
