@@ -29,24 +29,205 @@ rgb(116, 96, 217)
 */
 
 main {
+    width: 100%;
     margin-top: 80px;
-    padding: 100px 0 130px;
+    padding: 100px 0;
+}
+main::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 main .desc {
     width: 450px;
+    float: left;
 }
-main .desc .txt {}
-main .desc .txt li {display: none;}
-main .desc .txt li.on {display: block;}
-main .desc .txt li h3 {}
-main .desc .txt li h2 {}
-main .desc .txt li p {}
+main .desc .txt {
+    margin: 170px 0 100px;
+}
+main .desc .txt li {
+    display: none;
+}
+main .desc .txt li.on {
+    display: block;
+}
+main .desc .txt li h3 {
+    font-size: 24px;
+    color: rgb(204, 204, 204);
+    margin-bottom: 18px;
+}
+main .desc .txt li h2 {
+    font-size: 64px;
+    font-family: 'Raleway';
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+main .desc .txt li p {
+    font-size: 36px;
+}
 main .desc .pager {}
-main .desc .pager li {}
-main .desc .pager li.on {}
+main .desc .pager li {
+    color: #d9d9d9;
+    margin-right: 16px;
+}
+main .desc .pager li.on {
+    color: rgb(90, 74, 248);
+}
 
-main .slider {}
-main .slider .btn {}
-main .slider .slidewrap {}
-main .slider .slidewrap .slide {}
-main .slider .slidewrap .slide img {}
+main .slider {
+    width: 50%;
+    overflow: hidden;
+    float: right;
+    position: relative;
+    top: 0; left: 0;
+    padding: 40px;
+    box-sizing: border-box;
+}
+main .slider .btn {
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+main .slider .btn a {
+    position: absolute;
+    transform: translateY(-50%);
+}
+main .slider .btn a.prev {
+    left: 0;
+}
+main .slider .btn a.next {
+    left: 660px;
+}
+main .slider .slidewrap {
+    width: 400%;
+}
+main .slider .slidewrap .slide {
+    width: 660px;
+    height: 660px;
+    border-radius: 999px;
+    overflow: hidden;
+    opacity: 0.3;
+}
+main .slider .slidewrap .slide.on {
+    opacity: 1;
+}
+main .slider .slidewrap .slide img {
+    width: 100%;
+}
+
+section {
+    background: rgb(116, 96, 217) url(../img/img_05.png) no-repeat right top;
+    border-radius: 400px 0 0 0;
+}
+section .company {
+    padding: 600px 0;
+    background: url(../img/runday_logo_white_r.png) no-repeat;
+    background-position: -80% 100%;
+    background-size: 70%;
+}
+section .company h4 {
+    text-align: center;
+    color: rgb(255,255,255);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 60px;
+}
+section .company h4 span {
+    font-weight: 700;
+    position: relative;
+    top: 0;
+    z-index: 0;
+}
+section .company h4 span::before {
+    z-index: -1;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: -5px; left: 0;
+    background-color: rgba(90, 74, 248, 0.8);
+}
+
+section .apps {
+    text-align: center;
+    color: rgb(255,255,255);
+}
+section .apps p {
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+section .apps p span {
+    font-weight: 700;
+}
+section .apps .logos {
+    width: 1200px;
+    margin: 0 auto 120px;
+}
+section .apps .logos img {
+    width: 100%;
+}
+section .apps .downbtn {
+    width: 700px;
+    height: 100px;
+    margin: 0 auto 300px;
+}
+section .apps .downbtn a {
+    width: 300px;
+    float: left;
+    border-radius: 100px;
+    overflow: hidden;
+}
+section .apps .downbtn a:last-child {
+    margin-left: 100px;
+}
+section .apps .downbtn a img {
+    width: 100%;
+}
+
+section .contact {
+    width: 100%;
+    background: url(../img/contact_01.jpg) no-repeat top/cover;
+    color: rgb(255,255,255);
+}
+section .contact::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+section .contact .title {
+    width: 50%;
+    padding: 220px 100px;
+    box-sizing: border-box;
+    float: left;
+    text-align: right;
+}
+section .contact .title h4 {
+    width: 400px;
+    font-size: 64px;
+    font-family: 'Raleway';
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+section .contact .title p {
+    width: 400px;
+    font-size: 32px;
+}
+section .contact ul {
+    width: 50%;
+    float: left;
+    border-left: 1px solid rgba(255,255,255,0.2);
+    box-sizing: border-box;
+}
+section .contact ul li {
+    float: none;
+    font-size: 32px;
+    padding: 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+section .contact ul li span {
+    font-size: 36px;
+    font-weight: 700;
+}
