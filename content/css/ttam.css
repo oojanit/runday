@@ -27,3 +27,26 @@ font-style: normal;
 rgb(90, 74, 248)
 rgb(116, 96, 217)
 */
+
+main {
+    margin-top: 80px;
+    padding: 100px 0 130px;
+}
+main .desc {
+    width: 450px;
+}
+main .desc .txt {}
+main .desc .txt li {display: none;}
+main .desc .txt li.on {display: block;}
+main .desc .txt li h3 {}
+main .desc .txt li h2 {}
+main .desc .txt li p {}
+main .desc .pager {}
+main .desc .pager li {}
+main .desc .pager li.on {}
+
+main .slider {}
+main .slider .btn {}
+main .slider .slidewrap {}
+main .slider .slidewrap .slide {}
+main .slider .slidewrap .slide img {}
