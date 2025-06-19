@@ -1,0 +1,124 @@
+/* faq.css */
+
+@charset "UTF-8";
+
+/* FONTS */
+/*
+*** NOTO SANS KR 100~900 ***
+font-family: "Noto Sans KR", sans-serif;
+
+*** RALEWAY ***
+font-family: 'Raleway';
+font-weight: 900;
+font-style: italic;
+
+*** PRODUCT SANS ***
+font-family: 'Product Sans';
+font-weight: bold;
+font-style: normal;
+
+font-family: 'Product Sans';
+font-weight: normal;
+font-style: normal;
+*/
+
+/* COLORS */
+/*
+rgb(90, 74, 248)
+rgb(116, 96, 217)
+*/
+
+main {
+    width: 100%;
+    height: 600px;
+    margin: 80px 0 100px;
+    background: url(../img/img_06.png) no-repeat center/cover;
+}
+main .catch {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 120px;
+    color: rgb(255,255,255);
+}
+main .catch h2 {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 46px;
+}
+main .catch .contact {
+    font-size: 20px;
+    font-weight: 400;
+}
+main .catch .contact li {
+    float: none;
+    margin-bottom: 24px;
+    padding-left: 32px;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+main .catch .contact li a {
+    color: rgb(255,255,255);
+    font-weight: 700;
+    display: inline;
+}
+.contact li.mail {
+    background-image: url(../img/icon/email.png);
+}
+.contact li.tel {
+    background-image: url(../img/icon/phone.png);
+}
+.contact li.locat {
+    background-image: url(../img/icon/mark.png);
+}
+
+section {
+    width: 100%;
+    margin-bottom: 150px;
+}
+section .title {
+    width: 450px;
+    margin: 0 auto;
+    text-align: center;
+}
+section .title h3 {
+    font-family: 'Raleway';
+    font-weight: 900;
+    font-style: italic;
+    color: rgb(90, 74, 248);
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+section .title p {
+    font-size: 16px;
+    color: rgb(204, 204, 204);
+}
+section .accordion {
+    padding: 120px;
+    box-sizing: border-box;
+}
+section .accordion ul {}
+section .accordion ul li {
+    float: none;
+    padding: 50px 0;
+}
+section .accordion ul li {
+    border-bottom: 1px solid rgb(212, 210, 227);
+}
+section .accordion ul li a.que {
+    display: block;
+    width: 100%;
+    color: rgb(51, 51, 51);
+    font-size: 24px;
+    font-weight: bold;
+    margin: 24px 0;
+    background: url(../img/icon/btn_down.png) no-repeat right center;
+}
+section .accordion ul li a.que.on {
+    background: url(../img/icon/btn_close.png) no-repeat right center;
+}
+section .accordion ul li p.ans {
+    color: rgb(51, 51, 51);
+    font-size: 18px;
+    width: 85%;
+    /* display: none; */
+}

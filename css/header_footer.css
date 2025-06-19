@@ -4,6 +4,7 @@ header {
     height: 80px;
     background-color: rgb(255,255,255);
     position: fixed;
+    top: 0;
     z-index: 9999;
     box-shadow: 0 1px 10px #d9d9d9;
 }
