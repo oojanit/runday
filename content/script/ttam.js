@@ -10,4 +10,11 @@ $(function(){
         $('.gnb .submenu ul').stop().slideUp(200);
     });
 
+    // main slide
+    $('.slider .btn a.next').on('click',function(){
+        $('.slider .slidewrap').animate({
+            marginLeft: '-='+($('.slide').width())
+        },600);
+    });
+
 });

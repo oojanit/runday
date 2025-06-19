@@ -81,10 +81,10 @@ main .slider {
     float: right;
     position: relative;
     top: 0; left: 0;
-    padding: 40px;
     box-sizing: border-box;
 }
 main .slider .btn {
+    z-index: 999;
     position: absolute;
     top: 50%;
     left: 0;
@@ -97,7 +97,7 @@ main .slider .btn a.prev {
     left: 0;
 }
 main .slider .btn a.next {
-    left: 660px;
+    left: calc(660px - 76px);
 }
 main .slider .slidewrap {
     width: 400%;
