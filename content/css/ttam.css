@@ -30,8 +30,9 @@ rgb(116, 96, 217)
 
 main {
     width: 100%;
+    height: calc(100% - 180px);
     margin-top: 80px;
-    padding: 100px 0;
+    padding-top: 100px;
 }
 main::after {
     content: "";
@@ -41,12 +42,14 @@ main::after {
 main .desc {
     width: 450px;
     float: left;
+    position: relative;
 }
 main .desc .txt {
     margin: 170px 0 100px;
 }
 main .desc .txt li {
     display: none;
+    transition: all 0.6s;
 }
 main .desc .txt li.on {
     display: block;
@@ -54,22 +57,29 @@ main .desc .txt li.on {
 main .desc .txt li h3 {
     font-size: 24px;
     color: rgb(204, 204, 204);
-    margin-bottom: 18px;
+    margin-bottom: 12px;
 }
 main .desc .txt li h2 {
-    font-size: 64px;
+    font-size: 60px;
     font-family: 'Raleway';
     font-weight: 900;
     font-style: italic;
     margin-bottom: 20px;
+    line-height: 90%;
 }
 main .desc .txt li p {
-    font-size: 36px;
+    font-size: 32px;
 }
-main .desc .pager {}
+main .desc .pager {
+    position: absolute;
+    top: 100px;
+    left: 0;
+}
 main .desc .pager li {
     color: #d9d9d9;
     margin-right: 16px;
+    cursor: pointer;
+    transition: all 0.6s;
 }
 main .desc .pager li.on {
     color: rgb(90, 74, 248);
@@ -108,6 +118,7 @@ main .slider .slidewrap .slide {
     border-radius: 999px;
     overflow: hidden;
     opacity: 0.3;
+    transition: all 0.6s;
 }
 main .slider .slidewrap .slide.on {
     opacity: 1;
@@ -138,6 +149,7 @@ section .company h4 span {
     position: relative;
     top: 0;
     z-index: 0;
+    transition: all 0.6s;
 }
 section .company h4 span::before {
     z-index: -1;
@@ -167,6 +179,7 @@ section .apps .logos {
 }
 section .apps .logos img {
     width: 100%;
+    opacity: 0; /**/
 }
 section .apps .downbtn {
     width: 700px;
@@ -226,6 +239,10 @@ section .contact ul li {
     font-size: 32px;
     padding: 60px;
     border-bottom: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.6s;
+}
+section .contact ul li:hover {
+    background-color: rgba(0,0,0,0.5);
 }
 section .contact ul li span {
     font-size: 36px;
