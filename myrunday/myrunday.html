@@ -13,15 +13,74 @@
     <link rel="stylesheet" href="../fonts/font.css">
     <!-- style -->
     <!-- <link rel="stylesheet" href="../css/reset.css"> -->
-    <link rel="stylesheet" href="css/myrunday.css">
+    <link rel="stylesheet" href="css/myrunday_login.css">
     <!-- script -->
     <script src="../script/jquery-1.12.4.min.js"></script>
     <script src="script/myrunday.js"></script>
 </head>
 
 <body>
-    <header></header>
-    <section></section>
+    <header>
+        <h1 class="logo"><a href="#"><img src="../img/logo/runday_logo_small.png" alt="Runday"></a></h1>
+
+        <nav class="menu">
+            <ul class="gnb">
+                <li><a href="#">운동 기록</a></li>
+                <li><a href="#">나의 운동</a></li>
+                <li>
+                    <a href="#">계정 관리</a>
+                    <ul class="sub">
+                        <li><a href="#">개인정보 수정</a></li>
+                        <li><a href="#">소셜 계정 로그인 연동 관리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <form action="#" id="loginform">
+            <fieldset>
+                <legend>로그인</legend>
+                <h2>로그인하기</h2>
+
+                <label for="usermail">Email</label>
+                <input type="email" name="user-mail" id="usermail" placeholder="runday@gmail.com" required>
+
+                <label for="userpw">Password</label>
+                <a href="#">비밀번호를 잊으셨나요?</a>
+                <input type="password" name="user-pw" id="userpw" placeholder="비밀번호를 입력하세요." required>
+                
+            </fieldset>
+
+            <input type="submit" value="로그인">
+            <button><a href="#">구글로 계속하기</a></button>
+            <button><a href="#">네이버로 계속하기</a></button>
+            <p>계정이 없으신가요? <a href="#">가입하기</a></p>
+        </form>
+
+        <form action="#" id="joinform">
+            <fieldset>
+                <legend>가입</legend>
+                <h2>가입하기</h2>
+
+                <button><a href="#">구글 계정으로 가입하기</a></button>
+                <button><a href="#">네이버 아이디로 가입하기</a></button>
+
+                <label for="usermail">Email</label>
+                <input type="email" name="user-mail" id="usermail" placeholder="메일주소를 입력하세요." required>
+
+                <label for="userpw">Password</label>
+                <input type="password" name="user-pw" id="userpw" placeholder="비밀번호를 입력하세요." required>
+                <label for="userpw">Password Check</label>
+                <input type="password" name="user-pw" id="userpw" placeholder="비밀번호를 재입력하세요." required>
+                
+            </fieldset>
+
+            <input type="submit" value="가입하기">
+            <p>이미 계정이 있으신가요? <a href="#">로그인하기</a></p>
+        </form>
+    </section>
 
 </body>
 

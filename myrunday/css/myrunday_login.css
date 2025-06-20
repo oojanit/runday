@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+}
+ul, ol, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+img {
+    display: block;
+}
+
+/* COMMON */
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "Noto Sans KR", sans-serif;
+    color: rgb(51, 51, 51);
+}
+
+/* LOGIN PAGE */
+header {
+    width: 360px;
+    height: 100%;
+    background-color: lightblue;
+    float: left;
+}
+header .logo {}
+header .menu {}
+
+section {
+    width: calc(100% - 360px);
+    height: 100%;
+    float: left;
+}
+section #loginform {}
+section #joinform {
+    display: none;
+}
