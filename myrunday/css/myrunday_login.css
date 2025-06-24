@@ -55,7 +55,7 @@ header .logo a img {
 }
 header .menu {}
 header .menu a {
-    color: #333333;
+    color: rgb(51, 51, 51);
 }
 header .menu .gnb {}
 header .menu .gnb > li {
@@ -152,6 +152,9 @@ form input {
 form input::placeholder {
     font-size: 14px;
 }
+form input:focus {
+    outline-color: rgb(90, 74, 248);
+}
 form input[type="email"] {}
 form input[type="password"] {}
 form input[type="submit"] {
@@ -162,6 +165,7 @@ form input[type="submit"] {
     line-height: 45px;
     cursor: pointer;
     margin-bottom: 24px;
+    transition: all 0.3s;
 }
 form button {
     width: 100%;
@@ -173,6 +177,11 @@ form button {
     cursor: pointer;
     margin-bottom: 10px;
     background-color: rgba(90, 74, 248, 0.4);
+    transition: all 0.3s;
+}
+form button:hover {
+    background-color: rgb(90, 74, 248);
+    font-weight: 700;
 }
 form button a {
     width: 100%;
@@ -200,4 +209,11 @@ section #loginform {
 }
 section #joinform {
     /* display: none; */
+}
+#joinform fieldset:first-child::after {
+    content: "or";
+    display: block;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
 }
