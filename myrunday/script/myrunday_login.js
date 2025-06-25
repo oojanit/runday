@@ -23,8 +23,8 @@ $(document).ready(function () {
     $('#joinform').hide();
     $('form > p > a').on('click', function (e) {
         e.preventDefault();
-        $('#loginform').slideToggle(400);
-        $('#joinform').slideToggle(400);
+        $('#loginform').fadeToggle(400);
+        $('#joinform').fadeToggle(400);
     });
 
     // button hover effect - script or css?
