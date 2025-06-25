@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+}
+ul, ol, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+img {
+    display: block;
+}
+a {
+    display: block;
+    color: rgb(51, 51, 51);
+}
+
+/* COMMON */
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "Noto Sans KR", sans-serif;
+    color: rgb(51, 51, 51);
+    background: linear-gradient(to right bottom, #f7dfff,#ffffff,#aea6ff);
+}
+
+/* LOGIN PAGE */
+/* HEADER */
+header {
+    width: 360px;
+    height: 100%;
+    /* background-color: lightblue; */
+    float: left;
+    padding: 120px 50px 0;
+    box-sizing: border-box;
+    box-shadow: 1px 0 5px rgb(255, 255, 255);
+    position: relative; /* button의 기준 */
+}
+header .logo {
+    margin-bottom: 60px;
+    width: 120px;
+}
+header .logo a {
+    width: 100%;
+}
+header .logo a img {
+    width: 100%;
+}
+header .menu {}
+header .menu a {
+    color: rgb(51, 51, 51);
+}
+header .menu .gnb {}
+header .menu .gnb > li {
+    margin-bottom: 64px;
+    padding-left: 30px;
+    opacity: 0.6;
+    /* transition: all 0.6s; */
+}
+header .menu .gnb > li:nth-child(1) {background: url(../img/graph.png) no-repeat left 14px;}
+header .menu .gnb > li:nth-child(2) {background: url(../img/run.png) no-repeat left 10px;}
+header .menu .gnb > li:nth-child(3) {background: url(../img/person.png) no-repeat left 14px;}
+
+/* li.on design */
+header .menu li.on {
+    opacity: 1;
+    position: relative;
+    text-decoration: underline;
+    text-decoration-color: rgba(90, 74, 248, 0.5);
+    text-decoration-thickness: 16px;
+    text-underline-offset: -8px;
+}
+header .menu li.on::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 44px;
+    background-color: rgba(90, 74, 248, 0.8);
+    position: absolute;
+    top: 0;
+    right: -50px;
+}
+header .menu .gnb > li:hover {
+    opacity: 1;
+}
+header .menu .gnb > li > a {
+    font-size: 30px;
+    font-weight: 700;
+    width: 100%;
+}
+header .menu .gnb > li .sub {
+    margin-top: 20px;
+    display: none;
+}
+header .menu .gnb > li .sub li {
+    margin-bottom: 10px;
+    /* margin-left: -16px; */
+}
+header .menu .gnb > li .sub li a {
+    font-size: 20px;
+    font-weight: 400;
+}
+header button {
+    width: 300px;
+    border: 1px solid rgb(90, 74, 248);
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header button a {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 40px;
+    color: rgb(90, 74, 248);
+}
+header button:hover {
+    background-color: rgb(90, 74, 248);
+}
+header button:hover a {
+    color: rgb(255, 255, 255);
+}
+
+/* SECTION */
+section {
+    width: calc(100% - 360px);
+    height: 100%;
+    float: left;
+}
+section .profile {
+    width: 100%;
+    height: 100px;
+    background-color: #aea6ff;
+}
+section .row1 {
+    width: 100%;
+    height: 50%;
+    background-color: #ffffff;
+    padding: 30px 70px;
+    box-sizing: border-box;
+}
+section .row2 {
+    width: 100%;
+    height: calc(50% - 100px);
+    background-color: aquamarine;
+    padding: 0 70px 60px;
+    box-sizing: border-box;
+}
