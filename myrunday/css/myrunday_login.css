@@ -114,6 +114,7 @@ section {
 }
 section form {
     width: 50%;
+    max-width: 800px;
     height: 80%;
     margin: 70px auto;
     box-sizing: border-box;
@@ -213,7 +214,7 @@ section #joinform {
 #joinform fieldset:first-child::after {
     content: "or";
     display: block;
-    font-size: 16px;
+    font-size: 14px;
     width: 100%;
     text-align: center;
 }
