@@ -39,21 +39,17 @@ main::after {
     display: block;
     clear: both;
 }
+
+main .inner {
+    position: relative; /* .desc의 기준 */
+}
 main .desc {
-    width: 450px;
+    width: 35%;
     float: left;
-    position: relative;
+    position: absolute;
+    top: 20%;
 }
-main .desc .txt {
-    margin: 170px 0 100px;
-}
-main .desc .txt li {
-    display: none;
-    transition: all 0.6s;
-}
-main .desc .txt li.on {
-    display: block;
-}
+main .desc .txt {}
 main .desc .txt li h3 {
     font-size: 24px;
     color: rgb(204, 204, 204);
@@ -71,9 +67,7 @@ main .desc .txt li p {
     font-size: 32px;
 }
 main .desc .pager {
-    position: absolute;
-    top: 100px;
-    left: 0;
+    margin-bottom: 40px;
 }
 main .desc .pager li {
     color: #d9d9d9;
@@ -86,37 +80,33 @@ main .desc .pager li.on {
 }
 
 main .slider {
-    width: 50%;
-    overflow: hidden;
-    float: right;
-    position: relative;
-    top: 0; left: 0;
-    box-sizing: border-box;
-}
-main .slider .btn {
-    z-index: 999;
-    position: absolute;
-    top: 50%;
-    left: 0;
-}
-main .slider .btn a {
-    position: absolute;
-    transform: translateY(-50%);
-}
-main .slider .btn a.prev {
-    left: 0;
-}
-main .slider .btn a.next {
-    left: calc(660px - 76px);
-}
-main .slider .slidewrap {
-    width: 400%;
-}
-main .slider .slidewrap .slide {
     width: 660px;
     height: 660px;
-    border-radius: 999px;
     overflow: hidden;
+    float: right;
+    position: relative; /* .btn의 기준 */
+    border-radius: 50%;
+}
+main .slider .btn {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+main .slider .btn.prev {
+    left: 0;
+}
+main .slider .btn.next {
+    right: 0;
+}
+
+main .slider .slidewrap {
+    width: 400%;
+    height: 100%;
+}
+main .slider .slidewrap .slide {
+    width: 25%;
+    height: 100%;
     opacity: 0.3;
     transition: all 0.6s;
 }
@@ -146,20 +136,8 @@ section .company h4 {
 }
 section .company h4 span {
     font-weight: 700;
-    position: relative;
-    top: 0;
-    z-index: 0;
-    transition: all 0.6s;
-}
-section .company h4 span::before {
-    z-index: -1;
-    content: "";
-    display: block;
-    width: 100%;
-    height: 30px;
-    position: absolute;
-    bottom: -5px; left: 0;
-    background-color: rgba(90, 74, 248, 0.8);
+    background: url(../img/bg_bar.png) repeat-x left bottom;
+    background-size: 100% 40px;
 }
 
 section .apps {
@@ -179,7 +157,7 @@ section .apps .logos {
 }
 section .apps .logos img {
     width: 100%;
-    opacity: 0; /**/
+    opacity: 0;
 }
 section .apps .downbtn {
     width: 700px;

@@ -14,21 +14,27 @@ $(function () {
     var slideIdx = 1; // 1 2 3 4
     var slideLth = $('.slide').length; // 4
     console.log(slideLth);
-    $('.btn a.next').on('click', function (e) {
+
+    //초기설정
+    $('.desc .txt li').hide().first().show();
+
+    $('.next').on('click', function (e) {
         e.preventDefault();
         slideIdx++;
         if (slideIdx <= slideLth) {
             $('.slidewrap').animate({
                 marginLeft: -($('.slide').width())*(slideIdx-1)
             }, 600);
+
             $('.slide').eq(slideIdx-1).addClass('on').siblings().removeClass('on');
-            $('.desc .txt li').eq(slideIdx-1).addClass('on').siblings().removeClass('on');
+            $('.desc .txt li').hide().eq(slideIdx-1).fadeIn(800);
             $('.pager li').eq(slideIdx-1).addClass('on').siblings().removeClass('on');
         } else {
             slideIdx = slideLth;
         }
     });
-    $('.btn a.prev').on('click', function (e) {
+
+    $('.prev').on('click', function (e) {
         e.preventDefault();
         slideIdx--;
         if (slideIdx >= 1) {
@@ -36,7 +42,7 @@ $(function () {
                 marginLeft: -($('.slide').width())*(slideIdx-1)
             },600);
             $('.slide').eq(slideIdx-1).addClass('on').siblings().removeClass('on');
-            $('.desc .txt li').eq(slideIdx-1).addClass('on').siblings().removeClass('on');
+            $('.desc .txt li').hide().eq(slideIdx-1).fadeIn(800);
             $('.pager li').eq(slideIdx-1).addClass('on').siblings().removeClass('on');
         } else {
             slideIdx = 1;
@@ -54,7 +60,6 @@ $(function () {
             },600);
         }
     }); */
-    // 가상요소는 jQuery로 선택 불가능..
 
     // apps logo fadeIn
     $(window).on('scroll', function () {
@@ -67,8 +72,5 @@ $(function () {
             },1000,'linear');
         }
     });
-
-
-    // contact hover
 
 });
