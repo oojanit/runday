@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <title>My RunDay | 내 런데이</title>
@@ -17,6 +18,7 @@
     <script src="../script/jquery-1.12.4.min.js"></script>
     <script src="script/myrunday_main.js"></script>
 </head>
+
 <body>
 
     <header>
@@ -40,7 +42,7 @@
     </header>
 
     <section>
-        <aside class="profile">
+        <aside class="profile clearfix">
             <div class="pic"><img src="img/ellipse1.png" alt="프로필사진"></div>
             <div class="welcome">
                 <h2>안녕하세요, 주영운님!</h2>
@@ -52,15 +54,23 @@
             </div>
         </aside>
 
-        <article class="row1">
+        <article class="row1 clearfix">
             <div class="calendar">
                 <h3>2025.01</h3>
             </div>
             <div class="detail">
-                <h3>yyyy/mm/dd hr:mn</h3>
+                <h3>2025/01/16 19:36</h3>
                 <h4>30분 달리기 능력 향상 - 2주 1회차</h4>
+                <div class="wrap">
+                    <div class="map"><iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4476.580307749475!2d126.97331732405998!3d37.498004253581485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sko!2skr!4v1750909191155!5m2!1sko!2skr"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <table></table>
+                </div>
             </div>
         </article>
+
         <article class="row2">
             <div class="gauge"></div>
             <div class="graph">
@@ -72,6 +82,7 @@
             </div>
         </article>
     </section>
-    
+
 </body>
+
 </html>
