@@ -146,11 +146,11 @@ main .downbtn a img {
 /* CONTENTS - appslide */
 .contents .appslide {
     width: 100%;
-    padding: 120px 0 120px;
+    padding: 120px 0 120px 120px;
     box-sizing: border-box;
     background-color: rgb(90, 74, 248);
-    position: relative;
-    margin-bottom: 400px;
+    position: relative; /* ::before, .pager 의 기준 */
+    margin-bottom: 200px;
 }
 .contents .appslide::before {
     content: "";
@@ -166,8 +166,8 @@ main .downbtn a img {
     background-position-y: 43%;
 }
 .appslide .des {
-    width: 620px;
-    margin-left: 120px;
+    width: 50%;
+    float: left;
     color: rgb(255,255,255);
 }
 .appslide .des h4 {
@@ -182,43 +182,21 @@ main .downbtn a img {
 }
 .appslide .des .pager {
     font-size: 20px;
-}
-.appslide .des .pager li~li {
-    margin-left: 16px;
-}
-.appslide .des .pager li.on {
-    color: rgb(0,0,0);
-}
-.appslide .slider {
-    width: 1040px;
-    height: 800px;
-    position: absolute;
-    top: 10%;
-    right: 0;
-    outline: 2px solid red;
-    overflow: hidden;
-}
-.appslide .slider .slidewrap {
-    width: 1040px;
-    height: 100%;
     position: absolute;
     top: 0;
-    right: 0px;
+    left: 0;
 }
-.appslide .slider .slide {
-    cursor: pointer;
+.swiper-container {
+    width: 50%;
+    float: left;
+}
+.swiper-slide {
+    border-radius: 20px;
     overflow: hidden;
-    border-radius: 50px;
-    box-shadow: 1px 1px 10px rgba(116,96,217,0.3);
-    transition: all 0.6s;
 }
-.appslide .slider .slide.first {
-    width: 400px;
-}
-.appslide .slider .slide~.slide {
-    width: 300px;
-    margin-left: 20px;
-}
-.appslide .slider .slide img {
+.swiper-slide img {
     width: 100%;
+}
+.swiper-pagination {
+    color: rgb(90, 74, 248)
 }

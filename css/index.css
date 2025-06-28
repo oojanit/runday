@@ -201,43 +201,39 @@ main .downbtn a img {
     width: 100%;
 }
 
-/* 20250626 NEW */
-article.media_slide_new {
+/* MEDIA_SLIDE */
+article.media_slide {
     width: 100%;
     background-color: rgb(90,74,248);
     padding: 120px 0 80px;
     margin-bottom: 200px;
-
-    position: relative; /* .desc_new의 기준! */
+    position: relative; /* .desc_new, .btn 의 기준 */
 }
-article.media_slide_new .desc_new {
-    /* outline: 2px solid red; */
+article.media_slide .desc {
     width: 34%;
-    padding-left: 4%;
+    padding-right: 4%;
     box-sizing: border-box;
-
     position: absolute;
     left: 16.5%; /* 왼쪽 한 칸의 너비만큼 이동  */
     z-index: 1;
+    text-align: right;
 }
-article.media_slide_new .desc_new h2 {
+article.media_slide .desc h2 {
     font-size: 4em;
     font-family: 'Raleway';
     font-weight: 900;
     font-style: italic;
     color: rgb(255,255,255);
     margin-bottom: 20px;
-    /* margin-bottom: 5%; */
 }
-article.media_slide_new .desc_new p {
+article.media_slide .desc p {
     font-size: 36px;
     color: rgb(255,255,255);
     line-height: 120%;
-    /* margin-bottom: 10%; */
     margin-bottom: 60px;
 }
-article.media_slide_new .desc_new a {
-    display: block;
+article.media_slide .desc a {
+    display: inline-block;
     width: 320px;
     text-align: center;
     box-sizing: border-box;
@@ -246,58 +242,46 @@ article.media_slide_new .desc_new a {
     font-weight: 700;
     line-height: 70px;
     background-color: rgb(255,255,255);
-    border-radius: 9999px;
+    border-radius: 50px;
 }
-
-
-article.media_slide_new .slide-wrap {
+article.media_slide .slide-wrap {
     width: 100%;
-    position: relative; /* .slideimg의 기준! */
-    
+    position: relative; /* .slideimg의 기준 */
     overflow: hidden;
-    /* background-color: yellow; */
 }
-
-
-/* .slideimg 공통 css */
+/* .slideimg 공통 */
 .slide-wrap .slideimg {
     width: 16.5%;
     padding: 0 10px;
     box-sizing: border-box;
-
     float: left;
-
     position: absolute;
-
-    transition: all 0.5s;
-    /* outline: 3px solid red; */
+    transition: all 0.6s;
 }
-
 .slide-wrap .slideimg img {
     width: 100%;
     display: block;
     border-radius: 30px;
 }
-
-/* 각 슬라이드 css */
+/* 왼쪽 슬라이드 .s1 */
 .s1 {
     left: 0;
+    opacity: 0.8;
     position: relative !important;
 }
-
-/* 오른쪽 시작 - .s2 */
+/* 오른쪽 시작 .s2 */
 .s2 {
     left: 50.5%;
 }
 .s3 {
     left: 67%;
+    opacity: 0.8;
 }
 .s4 {
     left: 83.5%;
     opacity: 0.5;
 }
-
-/* .s5~.s8의 위치값은 중요하지 않음! */
+/* 안 보이는 슬라이드 .s5~.s8 */
 .s5 {
     left: 100%;
     opacity: 0;
@@ -314,96 +298,7 @@ article.media_slide_new .slide-wrap {
     left: 160%;
     opacity: 0;
 }
-
-
-
-article.media_slide_new .slidebtn {
-    margin-left: 22%;
-}
-article.media_slide_new .slidebtn a {
-    display: inline-block;
-    width: 95px;
-    height: 95px;
-    font-size: 0;
-}
-
-
-
-
-.media .media_slide {
-    width: 100%;
-    background-color: rgb(90,74,248);
-    padding: 120px 0 80px;
-    margin-bottom: 200px;
-    position: relative; /* btn 기준 */
-    overflow: hidden;
-}
-.media .media_slide .slidebox {
-    width: 100%;
-}
-.media .media_slide .slider {
-    float: left;
-}
-.media .media_slide .slider.prev {
-    width: calc(100% / 6 * 1);
-}
-.media .media_slide .slider.next {
-    width: calc(100% / 6 * 3);
-    float: right;
-}
-.media .media_slide .slider.hide {
-    display: none;
-}
-.media .media_slide .slider .slideimg {
-    float: left;
-    padding: 0 1%;
-    box-sizing: border-box;
-}
-.media .media_slide .slider .slideimg img {
-    width: 100%;
-    border-radius: 50px;
-}
-.media .media_slide .desc {
-    position: absolute;
-    top: 20%;
-    left: 25%;
-    text-align: right;
-}
-.media .media_slide .slider.prev .slideimg {
-    width: 100%;
-}
-.media .media_slide .slider.next .slideimg {
-    width: calc(100% / 3);
-}
-.media .media_slide .desc h2 {
-    font-size: 4em;
-    font-family: 'Raleway';
-    font-weight: 900;
-    font-style: italic;
-    color: rgb(255,255,255);
-    margin-bottom: 5%;
-}
-.media .media_slide .desc p {
-    font-size: 36px;
-    color: rgb(255,255,255);
-    line-height: 120%;
-    margin-bottom: 10%;
-}
-.media .media_slide .desc a {
-    display: inline-block;
-    width: 320px;
-    text-align: center;
-    padding: 8px 36px;
-    box-sizing: border-box;
-    color: rgb(90,74,248);
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 60px;
-    background-color: rgb(255,255,255);
-    border-radius: 9999px;
-}
-.media .media_slide .slidebtn {}
-.media .media_slide .slidebtn a {
+article.media_slide a.btn {
     display: block;
     width: 95px;
     height: 95px;
@@ -411,17 +306,16 @@ article.media_slide_new .slidebtn a {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 9;
 }
-.media .media_slide .slidebtn a img {
-    width: 100%;
+article.media_slide a.btn.prev {
+    left: 17%;
 }
-.media .media_slide .slidebtn a.btn_prev {
-    left: 5%;
-}
-.media .media_slide .slidebtn a.btn_next {
-    right: 5%;
+article.media_slide a.btn.next {
+    right: 17%;
 }
 
+ /* MEDIA_VIDEO */
 .media .media_video {
     width: 100%;
 }

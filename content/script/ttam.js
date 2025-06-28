@@ -10,12 +10,12 @@ $(function () {
         $('.gnb .submenu ul').stop().slideUp(200);
     });
 
-    // main slide, no loop, pager, desc txt change
+    // main slide, pager, desc txt change (no loop)
     var slideIdx = 1; // 1 2 3 4
     var slideLth = $('.slide').length; // 4
     console.log(slideLth);
 
-    //초기설정
+    // initial setting
     $('.desc .txt li').hide().first().show();
 
     $('.next').on('click', function (e) {
@@ -25,9 +25,8 @@ $(function () {
             $('.slidewrap').animate({
                 marginLeft: -($('.slide').width())*(slideIdx-1)
             }, 600);
-
             $('.slide').eq(slideIdx-1).addClass('on').siblings().removeClass('on');
-            $('.desc .txt li').hide().eq(slideIdx-1).fadeIn(800);
+            $('.desc .txt li').hide().eq(slideIdx-1).fadeIn(600);
             $('.pager li').eq(slideIdx-1).addClass('on').siblings().removeClass('on');
         } else {
             slideIdx = slideLth;
@@ -42,30 +41,26 @@ $(function () {
                 marginLeft: -($('.slide').width())*(slideIdx-1)
             },600);
             $('.slide').eq(slideIdx-1).addClass('on').siblings().removeClass('on');
-            $('.desc .txt li').hide().eq(slideIdx-1).fadeIn(800);
+            $('.desc .txt li').hide().eq(slideIdx-1).fadeIn(600);
             $('.pager li').eq(slideIdx-1).addClass('on').siblings().removeClass('on');
         } else {
             slideIdx = 1;
         }
     });
 
-    // company h4 span highlight
-    /* $(window).on('scroll', function () {
-        var scTop = $(this).scrollTop();
-        var winHeight = Math.ceil($(this).height() * 0.5); // window height 50%
-
-        if (scTop >= ($('.company').offset().top - winHeight)) {
-            $('section .company h4 span').find(':before').animate({
-                width: '100%'
-            },600);
-        }
-    }); */
-
-    // apps logo fadeIn
+    
     $(window).on('scroll', function () {
         var scTop = $(this).scrollTop();
         var winHeight = Math.ceil($(this).height() * 0.8); // window height 20%
-
+         
+        // company h4 span highlight
+        if (scTop >= ($('.company h4').offset().top - winHeight)) {
+            $('section .company h4 span').css({
+                backgroundSize: '100% 40px'
+            });
+        }
+         
+        // apps logo fadeIn
         if (scTop >= ($('.apps .logos').offset().top - winHeight)) {
             $('.apps .logos img').animate({
                 opacity: 1

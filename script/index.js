@@ -37,6 +37,7 @@ $(function () {
         var scTop = $(this).scrollTop();
         var winHeight = Math.ceil($(this).height() * 0.8); // window height 20%
 
+        // show contents along as scroll goes down
         if (scTop >= ($('.promo h3').offset().top - winHeight)) {
             $('.promo h3').animate({
                 opacity: 1
@@ -61,83 +62,45 @@ $(function () {
             }, 300);
         }
 
-        // score pop up & number count
+        // score pop up & number count function call
         if (scTop >= ($('.pop').offset().top - winHeight)) {
             $('.pop').eq(0).animate({
                 opacity: 1,
                 backgroundPositionY: '200px'
             }, 300, function () {
-                var id0 = setInterval(count0Fn, 6);
+                var id0 = setInterval(count0Fn, 5);
                 $('.pop').eq(1).animate({
                     opacity: 1,
                     backgroundPositionY: '200px'
                 }, 300, function () {
-                    var id1 = setInterval(count1Fn, 70);
+                    var id1 = setInterval(count1Fn, 54.05);
                     $('.pop').eq(2).animate({
                         opacity: 1,
                         backgroundPositionY: '200px'
                     }, 300, function () {
-                        var id2 = setInterval(count2Fn, 150);
+                        var id2 = setInterval(count2Fn, 133.33);
                         $('.pop').eq(3).animate({
                             opacity: 1,
                             backgroundPositionY: '200px'
                         }, 300, function () {
-                            var id3 = setInterval(count3Fn, 27);
+                            var id3 = setInterval(count3Fn, 22.22);
                         });
                     });
                 });
             });
         }
-    });
-
-    // score pop number count function
-    var count0 = count1 = count2 = count3 = 0;
-    function count0Fn() {
-        count0++;
-        if (count0 > 400) {
-            clearInterval(id0);
-        } else {
-            $(".pop").eq(0).find('.no').text(count0);
-        }
-    }
-    function count1Fn() {
-        count1++;
-        if (count1 > 37) {
-            clearInterval(id1);
-        } else {
-            $(".pop").eq(1).find('.no').text(count1);
-        }
-    }
-    function count2Fn() {
-        count2++;
-        if (count2 > 15) {
-            clearInterval(id2);
-        } else {
-            $(".pop").eq(2).find('.no').text(count2);
-        }
-    }
-    function count3Fn() {
-        count3++;
-        if (count3 > 90) {
-            clearInterval(id2);
-        } else {
-            $(".pop").eq(3).find('.no').text(count3);
-        }
-    }
+    }); // scroll events end
 
     // marquee
     setInterval(flow, 10);
     var moveNum = 0;
     function flow() {
         moveNum++;
-        // (무한반복을 위해) 다음을 위한 준비!
-        // li 하나의 너비를 구함: 그 너비보다 이동한 left값(moveNum)이 커졌을 때 
+        // li 하나의 너비보다 이동한 left값(moveNum)이 커졌을 때
         var boxWidth = $('.mrq1 .txt').first().outerWidth();
         if (moveNum > boxWidth) {
-            // 이동한 픽셀수가 li 하나의 너비보다 커졌을 때! >> 다음을 위한 준비!
-            // (왼쪽으로 흘러가서) 사라진 첫번째 li를 .flow의 맨 뒤로 이동 >> append
-            // .flow의 li 순서가 변경되었으므로 left값 초기화!
-            // 동시에 이동값(moveNum) 초기화        
+            // append 1st li as it disappears
+            // reset margin-left & moveNum
             $('.mrq1').append($('.mrq1 .txt').first()).css({
                 marginLeft: 0
             });
@@ -149,27 +112,80 @@ $(function () {
         }
     }
 
-    // media image slide
-    $('.slidebtn .btn_prev').click(function (e) {
+    // media image slide function call
+    $('.btn.prev').click(function (e) {
         e.preventDefault();
-
-        /* $('.slidebox .desc').slideUp(300);
-        $('.slidebox .desc').slideDown(300); */
-
-        $('.slider.next').children('.slideimg').last().prependTo($('.slider.hide'));
-        $('.slider.hide').children('.slideimg').last().prependTo($('.slider.prev'));
-        $('.slider.prev').children('.slideimg').last().prependTo($('.slider.next'));
+        goSlide(0);
     });
-
-    $('.slidebtn .btn_next').click(function (e) {
+    $('.btn.next').click(function (e) {
         e.preventDefault();
-
-        /* $('.slidebox .desc').slideUp(300);
-        $('.slidebox .desc').slideDown(300); */
-
-        $('.slider.hide').children('.slideimg').first().appendTo($('.slider.next'));
-        $('.slider.prev').children('.slideimg').first().appendTo($('.slider.hide'));
-        $('.slider.next').children('.slideimg').first().appendTo($('.slider.prev'));
+        goSlide(1);
     });
 
 });
+
+// FUNCTIONS //
+
+// score pop number count function
+var count0 = count1 = count2 = count3 = 0;
+function count0Fn() {
+    count0++;
+    if (count0 > 400) {
+        clearInterval(id0);
+    } else {
+        $(".pop").eq(0).find('.no').text(count0);
+    }
+}
+function count1Fn() {
+    count1++;
+    if (count1 > 37) {
+        clearInterval(id1);
+    } else {
+        $(".pop").eq(1).find('.no').text(count1);
+    }
+}
+function count2Fn() {
+    count2++;
+    if (count2 > 15) {
+        clearInterval(id2);
+    } else {
+        $(".pop").eq(2).find('.no').text(count2);
+    }
+}
+function count3Fn() {
+    count3++;
+    if (count3 > 90) {
+        clearInterval(id2);
+    } else {
+        $(".pop").eq(3).find('.no').text(count3);
+    }
+}
+
+// media slide function
+function goSlide(direction) {
+    var tg = document.querySelector('.slide-wrap');
+    var tg2 = tg.querySelectorAll('.slideimg');
+    console.log('.slideimg 갯수: ' + tg2.length);
+    if (direction === 0) {
+        // prev
+        $('.media_slide .desc').animate({
+            opacity: 0
+        },200);
+        tg.insertBefore(tg2.item(tg2.length - 1), tg2.item(0));
+    } else if (direction === 1) {
+        // next
+        $('.media_slide .desc').animate({
+            opacity: 0
+        },200);
+        tg.appendChild(tg2.item(0));
+    }
+    // read new .slideimg
+    tg2 = tg.querySelectorAll('.slideimg');
+    // reset the class
+    for (var i = 0; i < tg2.length; i++) {
+        tg2[i].setAttribute('class', 'slideimg s' + (i + 1));
+    }
+    $('.media_slide .desc').animate({
+            opacity: 1
+        },200);
+}

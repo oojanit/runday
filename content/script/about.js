@@ -14,7 +14,7 @@ $(function () {
     // main catch fade in
     $('main .catch').fadeIn(800);
 
-    // scroll - card
+    // scroll events
     $(window).on('scroll', function () {
         var scTop = $(this).scrollTop();
         var winHeight = Math.ceil($(this).height() * 0.8); // window height 20%
@@ -74,21 +74,16 @@ $(function () {
         }
     });
 
-    // appslide
-    $('.appslide .slider').on('click', function () {
-        $('.slidewrap').animate({
-            right: '320px'
-        }, 600, function () {
-            $('.slide').first().removeClass('first');
-            $('.slidewrap').append($('.slide:first-child'));
-            $(this).css('right', '0');
-            $('.slide').first().addClass('first');
+    // appslide swiper
+    var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 10,
+            slidesPerView: 2.5,
+            centeredSlides: false,
+            slideToClickedSlide: true,
+            grabCursor: true,
+            scrollbar: '.swiper-scrollbar',
+            pagination: '.swiper-pagination',
+            history: 'slide',
         });
-
-    });
-
-
-
-
 
 });
