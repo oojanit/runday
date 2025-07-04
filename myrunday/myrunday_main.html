@@ -14,9 +14,12 @@
     <!-- style -->
     <!-- <link rel="stylesheet" href="../css/reset.css"> -->
     <link rel="stylesheet" href="css/myrunday_main.css">
+    <link rel="stylesheet" href="powerful-calendar/style.css">
+    <link rel="stylesheet" href="powerful-calendar/theme.css">
     <!-- script -->
     <script src="../script/jquery-1.12.4.min.js"></script>
     <script src="script/myrunday_main.js"></script>
+    <script src="powerful-calendar/calendar.js"></script>
 </head>
 
 <body>
@@ -56,7 +59,7 @@
 
         <article class="row1 clearfix">
             <div class="calendar">
-                <h3>2025.01</h3>
+                <div class="calendar-container"></div>
             </div>
             <div class="detail">
                 <h3>2025/01/16 19:36</h3>
@@ -85,13 +88,77 @@
         </article>
 
         <article class="row2">
-            <div class="gauge"></div>
+            <div class="gauge">
+                <ul>
+                    <li class="off">0</li>
+                    <li class="on">1</li>
+                    <li class="on">1</li>
+                    <li class="on">1</li>
+                    <li class="on">1</li>
+                    <li class="on">1</li>
+                    <li class="on">1</li>
+                    <li class="on">1</li>
+                </ul>
+                <h3>80%</h3>
+            </div>
             <div class="graph">
                 <h3>속도 및 케이던스</h3>
+                <img src="img/graph.jpg" alt="속도 및 케이던스 그래프">
             </div>
             <div class="analyze">
                 <h3>구간 별 분석</h3>
-                <table></table>
+                <div class="tablebox">
+                <table>
+                    <tr>
+                        <th colspan="3">1. 준비 걷기</th>
+                    </tr>
+                    <tr>
+                        <td>12'03"<span>페이스</span></td>
+                        <td>0.41km<span>거리</span></td>
+                        <td>30<span>칼로리</span></td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">2. 천천히 달리기</th>
+                    </tr>
+                    <tr>
+                        <td>6'11"<span>페이스</span></td>
+                        <td>0.25km<span>거리</span></td>
+                        <td>27<span>칼로리</span></td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">3. 천천히 걷기</th>
+                    </tr>
+                    <tr>
+                        <td>11'10"<span>페이스</span></td>
+                        <td>0.18km<span>거리</span></td>
+                        <td>13<span>칼로리</span></td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">4. 천천히 달리기</th>
+                    </tr>
+                    <tr>
+                        <td>6'12"<span>페이스</span></td>
+                        <td>0.24km<span>거리</span></td>
+                        <td>26<span>칼로리</span></td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">5. 천천히 걷기</th>
+                    </tr>
+                    <tr>
+                        <td>10'18"<span>페이스</span></td>
+                        <td>0.19km<span>거리</span></td>
+                        <td>26<span>칼로리</span></td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">6. 천천히 달리기</th>
+                    </tr>
+                    <tr>
+                        <td>6'15"<span>페이스</span></td>
+                        <td>0.25km<span>거리</span></td>
+                        <td>27<span>칼로리</span></td>
+                    </tr>
+                </table>
+                </div>
             </div>
         </article>
     </section>

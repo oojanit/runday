@@ -122,6 +122,7 @@ header button {
     bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
+    transition: all 0.6s;
 }
 header button a {
     font-size: 16px;
@@ -172,11 +173,17 @@ section .profile {
     margin-top: 25px;
 }
 .profile .icons div {
-    width: 50%;
+    width: 45%;
     float: left;
 }
+.profile .icons div:last-child {
+    margin-left: 10%;
+}
+.profile .icons div a:hover {
+    opacity: 0.5;
+}
 .profile .icons div a img {
-    width: 90%;
+    width: 100%;
 }
 
 section .row1 {
@@ -194,6 +201,12 @@ section .row1 {
     box-sizing: border-box;
     border-radius: 50px;
 }
+.row1 .calendar .calendar-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 .row1 .detail {
     width: 64%;
     height: 100%;
@@ -257,7 +270,112 @@ section .row1 {
 section .row2 {
     width: 100%;
     height: calc(50% - 120px);
-    background-color: aquamarine;
     padding: 0 70px 60px;
     box-sizing: border-box;
+}
+.row2 .gauge {
+    width: 160px;
+    height: 100%;
+    float: left;
+    background-color: rgba(90, 74, 248, 0.1);
+    border-radius: 50px;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+.row2 .gauge ul {
+    margin-bottom: 10px;
+}
+.row2 .gauge ul li {
+    width: 100%;
+    height: 18px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    font-size: 0;
+}
+.row2 .gauge ul li.on {
+    background-color: rgb(90, 74, 248);
+}
+.row2 .gauge ul li.off {
+    background-color: rgb(255, 255, 255);
+}
+.row2 .gauge h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+.row2 .graph {
+    width: calc((100% - 160px) / 2 - 18px);
+    height: 100%;
+    float: left;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    margin-left: 18px;
+    overflow: hidden;
+}
+.row2 .graph h3 {
+    font-size: 0;
+}
+.row2 .graph img {
+    height: 100%;
+    margin: 0 auto;
+}
+.row2 .analyze {
+    width: calc((100% - 160px) / 2 - 18px);
+    height: 100%;
+    float: left;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    margin-left: 18px;
+    padding: 24px 40px;
+    box-sizing: border-box;
+}
+/* scroll style */
+.analyze::-webkit-scrollbar {
+    width: 10px;
+}
+.analyze::-webkit-scrollbar-thumb {
+    background-color: #769CFE;
+    border-radius: 50px;
+}
+div::-webkit-scrollbar-button {}
+div::-webkit-scrollbar-track {}
+div::-webkit-scrollbar-corner {
+}
+
+.row2 .analyze h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.row2 .analyze .tablebox {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+.row2 .analyze table {
+    width: 100%;
+}
+.row2 .analyze table tr {}
+.row2 .analyze table tr th {
+    background-color: rgba(51,51,51,0.05);
+    width: 100%;
+    line-height: 40px;
+    text-align: left;
+    text-indent: 16px;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(51,51,51,0.8);
+}
+.row2 .analyze table tr td {
+    height: 64px;
+    width: calc(100% / 3);
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+}
+.row2 .analyze table tr td span {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
 }

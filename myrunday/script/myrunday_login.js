@@ -20,15 +20,19 @@ $(document).ready(function () {
     });
 
     // #loginform / #joinform toggle
-    $('#joinform').hide();
-    $('form > p > a').on('click', function (e) {
+    $('#loginform > p > a').on('click', function (e) {
         e.preventDefault();
-        $('#loginform').fadeToggle(400);
-        $('#joinform').fadeToggle(400);
+        $('#loginform').hide();
+        $('#joinform').fadeIn(400);
+    });
+    $('#joinform > p > a').on('click', function (e) {
+        e.preventDefault();
+        $('#joinform').hide();
+        $('#loginform').fadeIn(400);
     });
 
     // button hover effect - script or css?
-    $('form input[type="submit"]').on('mouseenter',function(){
+    /* $('form input[type="submit"]').on('mouseenter',function(){
         $(this).stop().css({
             backgroundColor: 'rgba(90, 74, 248, 0.4)'
         });
@@ -37,6 +41,6 @@ $(document).ready(function () {
         $(this).stop().css({
             backgroundColor: 'rgb(90,74,248)'
         },300);
-    });
+    }); */
 
 });
