@@ -31,16 +31,4 @@ $(document).ready(function () {
         $('#loginform').fadeIn(400);
     });
 
-    // button hover effect - script or css?
-    /* $('form input[type="submit"]').on('mouseenter',function(){
-        $(this).stop().css({
-            backgroundColor: 'rgba(90, 74, 248, 0.4)'
-        });
-    });
-    $('form input[type="submit"]').on('mouseleave',function(){
-        $(this).stop().css({
-            backgroundColor: 'rgb(90,74,248)'
-        },300);
-    }); */
-
 });
