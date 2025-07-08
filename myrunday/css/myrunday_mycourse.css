@@ -279,58 +279,30 @@ section article.listwrap {
 .listcontent .list_run .recomm {
     margin-bottom: 48px;
 }
-.listcontent .list_run .recomm h3 {
+.listcontent .list_run  h3 {
     font-size: 24px;
     font-weight: 700;
     margin: 0 0 12px 12px;
 }
-.listcontent .list_run .recomm ul {
+.listcontent .list_run  ul {
     padding: 20px 16px;
 }
-.listcontent .list_run .recomm ul li {
+.listcontent .list_run  ul li {
     width: 25%;
     padding: 10px;
     box-sizing: border-box;
     float: left;
 }
-.listcontent .list_run .recomm ul li img {
+.listcontent .list_run  ul li img {
     width: 100%;
     margin-bottom: 6px;
 }
-.listcontent .list_run .recomm ul li h4 {
+.listcontent .list_run  ul li h4 {
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
 }
-.listcontent .list_run .recomm ul li p {
-    font-size: 12px;
-    line-height: 20px;
-}
-.listcontent .list_run .total {}
-.listcontent .list_run .total h3 {
-    font-size: 24px;
-    font-weight: 700;
-    margin: 0 0 12px 12px;
-}
-.listcontent .list_run .total ul {
-    padding: 20px 16px;
-}
-.listcontent .list_run .total ul li {
-    width: 25%;
-    padding: 10px;
-    box-sizing: border-box;
-    float: left;    
-}
-.listcontent .list_run .total ul li img {
-    width: 100%;
-    margin-bottom: 6px;
-}
-.listcontent .list_run .total ul li h4 {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 20px;
-}
-.listcontent .list_run .total ul li p {
+.listcontent .list_run  ul li p {
     font-size: 12px;
     line-height: 20px;
 }
