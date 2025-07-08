@@ -258,24 +258,81 @@ section article.listwrap {
     float: left;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50px;
+    position: relative;
+}
+.listcontent .closebtn {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    width: 20px; height: 20px;
+    font-size: 0;
 }
 .listcontent .list_run {
     width: 100%;
     margin: 7% auto;
     height: 86%;
-    padding: 60px 80px;
+    padding: 0 80px;
     box-sizing: border-box;
     position: relative; /* for .closebtn */
     overflow-y: scroll;
 }
-.listcontent .list_run .closebtn {
-    position: absolute;
-    top: 60px;
-    right: 80px;
-    width: 20px; height: 20px;
-    font-size: 0;
+.listcontent .list_run .recomm {
+    margin-bottom: 48px;
 }
-.listcontent .list_run .recomm {}
+.listcontent .list_run .recomm h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 12px 12px;
+}
+.listcontent .list_run .recomm ul {
+    padding: 20px 16px;
+}
+.listcontent .list_run .recomm ul li {
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+    float: left;
+}
+.listcontent .list_run .recomm ul li img {
+    width: 100%;
+    margin-bottom: 6px;
+}
+.listcontent .list_run .recomm ul li h4 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+}
+.listcontent .list_run .recomm ul li p {
+    font-size: 12px;
+    line-height: 20px;
+}
 .listcontent .list_run .total {}
+.listcontent .list_run .total h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 12px 12px;
+}
+.listcontent .list_run .total ul {
+    padding: 20px 16px;
+}
+.listcontent .list_run .total ul li {
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+    float: left;    
+}
+.listcontent .list_run .total ul li img {
+    width: 100%;
+    margin-bottom: 6px;
+}
+.listcontent .list_run .total ul li h4 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+}
+.listcontent .list_run .total ul li p {
+    font-size: 12px;
+    line-height: 20px;
+}
 
-.listcontent .list_my {display: none;}
+.listcontent .list_my {}
