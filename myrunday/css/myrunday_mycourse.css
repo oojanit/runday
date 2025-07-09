@@ -206,7 +206,7 @@ section article.listwrap {
 /* LIST - TITLE */
 .listwrap .listtitle {
     width: 30%;
-    height: 500px;
+    /* height: 500px; */
     background-color: rgb(255, 255, 255);
     border-radius: 50px;
     padding: 32px;
@@ -259,6 +259,7 @@ section article.listwrap {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50px;
     position: relative;
+    display: none;
 }
 .listcontent .closebtn {
     position: absolute;
@@ -292,6 +293,7 @@ section article.listwrap {
     padding: 10px;
     box-sizing: border-box;
     float: left;
+    cursor: pointer;
 }
 .listcontent .list_run  ul li img {
     width: 100%;
