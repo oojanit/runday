@@ -28,11 +28,15 @@ $(document).ready(function () {
 
         //selected menu display listcontent
         if ($(this).text() == '달리기') {
-            $('.listwrap .listcontent').show();
+            $('.listwrap .listcontent').show().css({
+                backgroundColor: 'rgba(255, 255, 255, 0.5)'
+            });
             $('.list_my').hide();
             $('.list_run').show();
         } else if ($(this).text() == '나의 운동') {
-            $('.listwrap .listcontent').show();
+            $('.listwrap .listcontent').show().css({
+                backgroundColor: 'transparent'
+            });
             $('.list_run').hide();
             $('.list_my').show();
         } else {
