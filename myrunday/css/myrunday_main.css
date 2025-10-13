@@ -107,7 +107,7 @@ header .menu .gnb > li:hover {
     opacity: 1;
 }
 header .menu .gnb > li > a {
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: 700;
     width: 100%;
 }
@@ -120,7 +120,7 @@ header .menu .gnb > li .sub li {
     /* margin-left: -16px; */
 }
 header .menu .gnb > li .sub li a {
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: 400;
 }
 header button {
@@ -135,7 +135,7 @@ header button {
     transition: all 0.6s;
 }
 header button a {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 40px;
     color: rgb(90, 74, 248);
@@ -171,11 +171,11 @@ section .profile {
     margin-left: 32px;
 }
 .profile .welcome h2 {
-    font-size: 36px;
+    font-size: 2.2rem;
     font-weight: 700;
 }
 .profile .welcome p {
-    font-size: 18px;
+    font-size: 1.2rem;
 }
 .profile .icons {
     float: right;
@@ -227,12 +227,12 @@ section .row1 {
     border-radius: 50px;
 }
 .row1 .detail h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     display: inline;
 }
 .row1 .detail h4 {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     display: inline;
     margin-left: 18px;
@@ -268,11 +268,11 @@ section .row1 {
 .row1 .detail .wrap table tr {}
 .row1 .detail .wrap table tr td {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1.2rem;
     width: 100px;
 }
 .row1 .detail .wrap table tr td span {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 100;
     display: block;
 }
@@ -290,11 +290,15 @@ section .row2 {
     background-color: rgba(90, 74, 248, 0.1);
     border-radius: 50px;
     text-align: center;
-    padding: 40px;
+    padding: 3%;
     box-sizing: border-box;
+    
+    overflow: hidden;
 }
 .row2 .gauge ul {
     margin-bottom: 10px;
+    width: 90%;
+    margin: 0 auto;
 }
 .row2 .gauge ul li {
     width: 100%;
@@ -310,7 +314,7 @@ section .row2 {
     background-color: rgb(255, 255, 255);
 }
 .row2 .gauge h3 {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
 }
 .row2 .graph {
@@ -326,8 +330,8 @@ section .row2 {
     font-size: 0;
 }
 .row2 .graph img {
-    height: 100%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 5% auto 0;
 }
 .row2 .analyze {
     width: calc((100% - 160px) / 2 - 18px);
@@ -340,7 +344,7 @@ section .row2 {
     box-sizing: border-box;
 }
 .row2 .analyze h3 {
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 20px;
     margin-left: 20px;
@@ -361,7 +365,7 @@ section .row2 {
     line-height: 40px;
     text-align: left;
     text-indent: 16px;
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: 400;
     color: rgba(51,51,51,0.8);
 }
@@ -369,11 +373,11 @@ section .row2 {
     height: 64px;
     width: calc(100% / 3);
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1.2rem;
     text-align: center;
 }
 .row2 .analyze table tr td span {
     display: block;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.9rem;
 }
